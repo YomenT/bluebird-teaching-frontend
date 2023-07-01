@@ -11,7 +11,7 @@ class MainContent extends React.Component {
 
     componentDidMount() {
         this.setState({isLoading: false})
-	fetch("http://www.bluebird-teaching.com/focus_log_api/")
+	fetch("https://www.bluebird-teaching.com/focus_log_api/")
             .then(response => response.json())
             .then(data => {
                 this.setState({

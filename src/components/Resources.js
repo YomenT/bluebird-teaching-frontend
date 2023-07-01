@@ -14,7 +14,7 @@ class Resources extends React.Component {
 
     componentDidMount() {
         this.setState({isLoading: false})
-        fetch("http://localhost:8000/focus_log_api/")
+        fetch("https://localhost:8000/focus_log_api/")
             .then(response => response.json())
             .then(data => {
                 this.setState({
