@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 Page Not Found</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1b2b44;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #dee9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            max-width: 750px;
+            width: 80vw;
+        }
+
+        .error {
+            font-size: clamp(1rem, 5vw, 2rem);
+            color: #1b2b44;
+        }
+
+        p {
+            font-size: clamp(.5rem, 3vw, 1.2rem);
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        span {
+            color: #5b92e5;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #5b92e5;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .button-text {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .bird {
+            height: 20vh;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">BlueBird <span>Teaching</span></h1>
+    <div class="container">
+        <h1 class="error">404 - Page Not Found</h1>
+        <p>Oops! Looks like we flew off course and couldn't find the page you're looking for.</p>
+        <p>Please check the URL and try again.</p>
+        <div class="button">
+            <a href="/" class="button-text">Back to the Nest!</a>
+        </div>
+    </div>
+    <img src="https://i.ibb.co/ZVmTwmJ/image-2023-06-20-174043623.png" class="bird">
+    <a style="font-size: clamp(.2rem, 3vw, 1rem); text-decoration: none; position: fixed; bottom: 10px;color: rgb(47, 133, 255);"
+        href="https://www.flaticon.com/free-stickers/parakeet" title="parakeet stickers">Parakeet stickers created by
+        SoulGIE -
+        Flaticon</a>
+</body>
+</html>
