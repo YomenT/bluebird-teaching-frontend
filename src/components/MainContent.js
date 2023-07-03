@@ -11,7 +11,7 @@ class MainContent extends React.Component {
 
     componentDidMount() {
         this.setState({isLoading: false})
-	fetch("https://www.bluebird-teaching.com/focus_log_api/")
+	fetch("http://www.bluebird-teaching.com/focus_log_api/")
             .then(response => response.json())
             .then(data => {
                 this.setState({
@@ -30,21 +30,23 @@ class MainContent extends React.Component {
             this.state.focusInfo.map(data => (descriptionList.push(data.description)))
             return (
                 <div className="bodyDiv">
+                    <hr style={{ width: '90%', textAlign: "center", marginBottom: "0px", backgroundColor: "#fffAF0" }}></hr>
                     <h2 style={{ textAlign: "center", paddingTop: "100px" }}>Current Focus</h2>
                     <h3 style={{ paddingTop: "25px", textAlign: "center", color: "#5b92e5", paddingBottom: "25px" }}>{titleList.slice(-1)}</h3>
                     <p className="p-focus"><strong>Objective: </strong>{objectiveList.slice(-1)}</p>
                     <p className="p-focus" style={{ paddingBottom: "100px" }}><small>{descriptionList.slice(-1)}</small></p>
-                    <hr style={{ width: '75%', textAlign: "center", marginBottom: "0px", backgroundColor: "#fffAF0" }}></hr>
+                    <hr style={{ width: '90%', textAlign: "center", marginBottom: "0px", backgroundColor: "#fffAF0" }}></hr>
                 </div>
             )
         } else {
             return (
                 <div className="bodyDiv">
+                    <hr style={{ width: '90%', textAlign: "center", marginBottom: "0px", backgroundColor: "#fffAF0" }}></hr>
                     <h2 style={{ textAlign: "center", paddingTop: "100px" }}>Current Focus</h2>
                     <h3 style={{ paddingTop: "25px", textAlign: "center", color: "#5b92e5", paddingBottom: "25px" }}>Loading</h3>
                     <p className="p-focus"><strong>Objective: </strong>Loading</p>
                     <p className="p-focus">Loading</p>
-                    <hr style={{ width: '75%', textAlign: "center", marginBottom: "0px", backgroundColor: "#fffAF0" }}></hr>
+                    <hr style={{ width: '90%', textAlign: "center", marginBottom: "0px", backgroundColor: "#fffAF0" }}></hr>
                 </div>
             )
         }
