@@ -9,16 +9,16 @@ class LatestFocus extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.setState({ isLoading: false });
-    fetch("http://www.bluebird-teaching.com/focus_log_api/")
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({
-          focusInfo: data,
-        });
-      });
-  }
+    componentDidMount() {
+        this.setState({isLoading: false})
+        fetch("https://adminbluebirdteaching.pythonanywhere.com/focus_log_api/")
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    focusInfo: data
+                })
+            })
+    }
 
   render() {
     if (this.state.isLoading === false) {
