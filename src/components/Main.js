@@ -53,6 +53,7 @@ import Python from './Python'
 import HowToCodePython from './python-pages/HowToCodePython';
 import PolynomialsOfHigherDegree from './passport-to-advanced-math/PolynomialsOfHigherDegree';
 import ChainsSeriesPdfPage from './ChainsSeriesPdfPage';
+import Lesson from './python-pages/Lesson';
 
 const Main = () => {
   return (
@@ -111,6 +112,7 @@ const Main = () => {
       {/* Python */}
       <Route exact path='/python' component={Python}></Route>
       <Route exact path='/python/introduction' component={HowToCodePython}></Route>
+      <Route exact path="/:subset/:lessonId/" component={Lesson} />
     </Switch>
   );
 }
