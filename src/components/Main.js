@@ -8,6 +8,7 @@ import AboutResources from './OtherResources'
 import FocusLog from './FocusLog'
 import Resources from './Resources'
 import SatPrep from './SatPrep'
+import NotFound from "./error";
 
 // Heart of Algebra
 import IntroductionToHeartOfAlgebra from './IntroductionToHeartOfAlgebra';
@@ -113,6 +114,7 @@ const Main = () => {
       <Route exact path='/python' component={Python}></Route>
       <Route exact path='/python/introduction' component={HowToCodePython}></Route>
       <Route exact path="/:subset/:lessonId/" component={Lesson} />
+      <Route component={NotFound} />
     </Switch>
   );
 }
