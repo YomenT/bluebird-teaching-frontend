@@ -29,7 +29,7 @@ const Navbar = () => {
         </Link>
         <Link to="/python">
           <button type="button" class="outline-button">
-            Python For Non-Engineers
+            PCEP Course at IAR
           </button>
         </Link>
         <Link to="/focus_log">
