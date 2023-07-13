@@ -27,8 +27,7 @@ class IntroductionToLinearFunctions extends React.Component {
                     <img 
                         src={"https://i.ibb.co/rmjtXtc/pdfresizer-com-pdf-crop-1.png"}
                         alt="Vertical Line Test"
-                        width={400}
-                        height={400} />
+                        style={{ width: "30%" }} />
                     <p className="p-body-small" style={{ paddingTop: "10px" }}>
                         However, if we look at the drawing below, most of the dotted lines cross the graph twice.  It really only takes one vertical line to 
                         cross twice for the test to fail.  Therefore, this graph does not represent a function.
@@ -36,8 +35,7 @@ class IntroductionToLinearFunctions extends React.Component {
                     <img 
                         src={"https://i.ibb.co/Jrhw0Lm/Vertical.png"}
                         alt="Vertical Line Test Fail"
-                        width={400}
-                        height={400} />
+                        style={{ width: "30%" }} />
                     <p className="p-body-small" style={{ paddingTop: "50px" }}>
                         <i><strong>Question: </strong> Is a circle a function?</i>
                     </p>
@@ -51,32 +49,28 @@ class IntroductionToLinearFunctions extends React.Component {
                     <img 
                         src={"https://i.ibb.co/0svShwz/Quadratic.png"}
                         alt="Quadratic"
-                        width={200}
-                        height={200} />
+                        style={{ width: "12%" }} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>
                         B)
                     </p>
                     <img 
                         src={"https://i.ibb.co/hB3wLmJ/Not-Function.png"}
                         alt="Not a Function"
-                        width={200}
-                        height={200} />
+                        style={{ width: "12%" }} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>
                         C)
                     </p>
                     <img 
                         src={"https://i.ibb.co/T2TGxr1/Linear.png"}
                         alt="Linear"
-                        width={200}
-                        height={200} />
+                        style={{ width: "12%" }} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>
                         D)
                     </p>
                     <img 
                         src={"https://i.ibb.co/RDBBgKm/Step.png"}
                         alt="Step"
-                        width={200}
-                        height={200} />
+                        style={{ width: "12%" }} />
                     <h4 className="h4-blue-headers" style={{ paddingTop: "75px" }}>Create it!</h4>
                     <p className="p-body">
                         Now that you've seen a sample problem involving functions and the vertical line test, try to create your own example problem.  This 

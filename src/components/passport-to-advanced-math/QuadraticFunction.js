@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/QuadraticFunction.css"
 
 import Logo from '../Logo'
 import Footer from '../Footer'

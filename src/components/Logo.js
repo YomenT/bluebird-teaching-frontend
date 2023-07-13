@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./css/Logo.css"
 import { Link } from "react-router-dom";
 
 const Navbar = () => {

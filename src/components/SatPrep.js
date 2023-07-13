@@ -33,7 +33,7 @@ class SatPrep extends React.Component {
                         Unfortunately, my expertise lies in the math section of the SAT.  Until I am able to find additional help with the reading portion of 
                         the SAT, this page will only cover SAT math material.
                     </p>
-                    <div>
+                    <div style={{ aspectRatio: "16/9", width: "70%" }}>
                         <ReactPlayer 
                             url="https://www.youtube.com/watch?v=5qap5aO4i9A"
                         />
@@ -62,73 +62,6 @@ class SatPrep extends React.Component {
                         for my poor coding skills, and thank you for your patience :)
                     </p>
                     <SatPrepLinkOutline />
-                    {/* <div className="wrap-collabsible" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
-                        <input id="HOA-collapsible" className="toggle" type="checkbox"></input>
-                        <label for="HOA-collapsible" className="lbl-toggle">Heart of Algebra</label>
-                        <div className="collapsible-content">
-                            <div className="collapsible-inner" style={{  
-                                paddingBottom: "150px",
-                                }}>
-                                <div style={{ marginLeft: "5%", marginRight: "5%" }}>
-                                    <IntroductionToHeartOfAlgebra />
-                                    <IntroductionToFunctions />
-                                    <FunctionNotation />
-                                    <IntroToLinear />
-                                    <ModellingLinear />
-                                    <ParallelPerpendicular />
-                                    <SystemofLinearEquations1 />
-                                    <SystemofLinearEquations2 />
-                                    <LinearInequalities />
-                                    <GraphingLinearInequalities />
-                                    <GraphingSystemsOfLinearInequalities />
-                                    <HeartofAlgebraCompletion />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="wrap-collabsible" style={{ paddingBottom: "50px" }}>
-                        <input id="PSADA-collapsible" className="toggle" type="checkbox"></input>
-                        <label for="PSADA-collapsible" className="lbl-toggle">Problem Solving and Data Analysis</label>
-                        <div className="collapsible-content">
-                            <div className="collapsible-inner" style={{  
-                                paddingBottom: "150px",
-                                }}>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="wrap-collabsible" style={{ paddingBottom: "50px" }}>
-                        <input id="PTAM-collapsible" className="toggle" type="checkbox"></input>
-                        <label for="PTAM-collapsible" className="lbl-toggle">Passport to Advanced Math</label>
-                        <div className="collapsible-content">
-                            <div className="collapsible-inner" style={{  
-                                paddingBottom: "150px",
-                                }}>
-                                    <div style={{ marginLeft: "5%", marginRight: "5%" }}>
-                                        <PassportToAdvancedMathIntroduction />
-                                        <PolynomialsPart1 />
-                                        <PolynomialsPart2 />
-                                        <PolynomialsPart3 />
-                                        <QuadraticFunctionPart1 />
-                                        <QuadraticFunctionGraphicalAnalysis />
-                                        <QuadraticFunctionGraphicalAnalysis2 />
-                                        <FactoringPart1 />
-                                        <FactoringPart2 />
-                                        <ExponentRules />
-                                        <ExponentRules2 />
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="wrap-collabsible">
-                        <input id="ATIM-collapsible" className="toggle" type="checkbox"></input>
-                        <label for="ATIM-collapsible" className="lbl-toggle">Addtional Topics in Math</label>
-                        <div className="collapsible-content">
-                            <div className="collapsible-inner" style={{  
-                                paddingBottom: "150px",
-                                }}>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
                 <Footer />
             </div>

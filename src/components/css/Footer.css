@@ -1,0 +1,14 @@
+.blue {
+    margin: 0;
+    padding: 20px 10px;
+    background: #1b2b44;
+  }
+  
+  .blue div {
+    height: 100%;
+    width: 49%;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+  }

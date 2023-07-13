@@ -38,8 +38,7 @@ class GraphingSystemsOfLinearInequalities extends React.Component {
                     <img 
                         src="https://i.ibb.co/MnFYfSb/Graphing-Systems-Of-Linear-Inequalities-1.png"
                         alt="Graphing Linear Inequalities"
-                        width={800}
-                        height={850} />
+                        style={{ width: "80%" }} />
                     <p className="p-body-small" style={{ paddingTop: "25px" }}>
                         There's sort of a lot going on in that picture.  Do you think you understand each step?  Remember that you are always free 
                         to reach out with any questions that you have.  We're happy to help!
@@ -60,32 +59,28 @@ class GraphingSystemsOfLinearInequalities extends React.Component {
                     <img 
                         src="https://i.ibb.co/Qfc9QB2/Inequalities-A.png"
                         alt="Answer Choice A"
-                        width={200}
-                        height={200} />
-                    <p className="p-body-small">
+                        style={{ width: "18%" }} />
+                    <p className="p-body-small" style={{ paddingTop: "15px" }}>
                         B)
                     </p>
                     <img 
                         src="https://i.ibb.co/8gn0GLC/Inequalities-B.png"
                         alt="Answer Choice B"
-                        width={200}
-                        height={200} />
-                    <p className="p-body-small">
+                        style={{ width: "18%" }} />
+                    <p className="p-body-small" style={{ paddingTop: "15px" }}>
                         C)
                     </p>
                     <img 
                         src="https://i.ibb.co/0CJ6g4j/Inequalities-C.png"
                         alt="Answer Choice C"
-                        width={200}
-                        height={200} />
-                    <p className="p-body-small">
+                        style={{ width: "18%" }} />
+                    <p className="p-body-small" style={{ paddingTop: "15px" }}>
                         D)
                     </p>
                     <img 
                         src="https://i.ibb.co/rv6qh4B/Inequalities-D.png"
                         alt="Answer Choice D"
-                        width={200}
-                        height={200} />
+                        style={{ width: "18%" }} />
                     <h4 className="h4-blue-headers" style={{ paddingTop: "75px" }}>Create it!</h4>
                     <p className="p-body" style={{ marginBottom: "150px" }}>
                         You can take a break from the ordinary Create It! portions.  You've earned it!  This is actually the last section in the Heart of Algebra!  Congratulations 

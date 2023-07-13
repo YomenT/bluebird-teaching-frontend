@@ -1,0 +1,16 @@
+.myDiv {
+    margin-top: 0;
+    text-align: center;
+    background: #1b2b44;
+    margin-bottom: 0;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .button-alt {
+    background-color: #6c757d;
+  }
