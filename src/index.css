@@ -50,6 +50,7 @@
 }
 
 body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -57,14 +58,12 @@ body {
 h1 {
   margin: 0;
   color: #fffAF0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: clamp(80px, 8vw, 200px);
 }
 
 h2 {
   margin: 0;
   color: #fffAF0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: clamp(40px, 2vw, 50px);
 }
 
@@ -80,7 +79,6 @@ h2 {
 h3 {
   margin: 0;
   color: #fffAF0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 50px;
 }
 
@@ -91,7 +89,6 @@ h3 {
 h4 {
   margin: 0px;
   color: #fffAF0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 35px;
 }
 
@@ -100,13 +97,11 @@ h4 {
 }
 
 p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: clamp(20px, 2vw, 30px);
   color: #fffAF0;
 }
 
 .p-focus {
-  font-family: 'Courier New', Courier, monospace;
   font-size: 23px;
   color: #fffAF0;
   margin-left: 10%;
@@ -178,10 +173,6 @@ p {
   padding-right: 0;
   margin-right: 0;
   margin-left: 0;
-}
-
-label {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .high-level-objectives {
@@ -268,23 +259,16 @@ input[type='checkbox'] {
 
 .lbl-toggle {
   display: block;
-
   font-weight: bold;
-  font-family: monospace;
   font-size: 1.2rem;
   text-transform: uppercase;
   text-align: left;
-
   padding: 1rem;
-
   color: #ffffff;
   background: #5b92e5;
-
   cursor: pointer;
-
   border-radius: 7px;
   transition: all 0.25s ease-out;
-
   margin-bottom: 0px;
 }
 
