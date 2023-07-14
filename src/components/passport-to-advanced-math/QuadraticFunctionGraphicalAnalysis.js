@@ -36,9 +36,9 @@ class QuadraticFunctionGraphicalAnalysis extends React.Component {
 
                     <img 
                         src={"https://i.ibb.co/jzrjpK7/Graphical-Analysis1.png"}
-                        alt="Graphical Analysis 1"
-                        width={350}
-                        height={350} />
+                        alt="Graphical Analysis 1"                
+                        style={{ width: "30%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body" style={{ paddingTop: "25px" }}>
                         -x<sup>2</sup> + 1 = y
@@ -48,7 +48,9 @@ class QuadraticFunctionGraphicalAnalysis extends React.Component {
                         src={"https://i.ibb.co/Fzz76Xh/Graphical-Analysis2.png"}
                         alt="Graphical Analysis 1"
                         width={350}
-                        height={350} />
+                        height={350}
+                        style={{ width: "30%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body" style={{ paddingTop: "25px" }}>
                         There is only one difference.  The one that had a positive x<sup>2</sup> opened upward, and the one with a negative x<sup>2</sup> opened downward.  Let's 
@@ -89,26 +91,26 @@ class QuadraticFunctionGraphicalAnalysis extends React.Component {
                     <img 
                         src={"https://i.ibb.co/6nK08zq/Graphical-Analysis-Answer1.png"}
                         alt="Answer Choice 1"
-                        width={500}
-                        height={500} />
+                        width={250}
+                        height={250} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>B)</p>
                     <img 
                         src={"https://i.ibb.co/YBpbqsF/Graphical-Analysis-Answer2.png"}
                         alt="Answer Choice 2"
-                        width={500}
-                        height={500} />
+                        width={250}
+                        height={250} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>C)</p>
                     <img 
                         src={"https://i.ibb.co/WtYJJyq/Graphical-Analysis-Answer3.png"}
                         alt="Answer Choice 3"
-                        width={500}
-                        height={500} />
+                        width={250}
+                        height={250} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>D)</p>
                     <img 
                         src={"https://i.ibb.co/NYW3h8z/Graphical-Analysis-Answer4.png"}
                         alt="Answer Choice 4"
-                        width={500}
-                        height={500} />
+                        width={250}
+                        height={250} />
 
                     <p className='p-body' style={{ paddingTop: "25px" }}>2.  Which of the following could possibly represent the graph for x<sup>2</sup> - x + 2 = y?  There are two possible answers.</p>
                     <p className="p-body-small">
@@ -120,26 +122,26 @@ class QuadraticFunctionGraphicalAnalysis extends React.Component {
                     <img 
                         src={"https://i.ibb.co/26FswcD/Graphical-Analysis-Answer5.png"}
                         alt="Answer Choice 1"
-                        width={550}
-                        height={550} />
+                        width={250}
+                        height={250} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>B)</p>
                     <img 
                         src={"https://i.ibb.co/9ysFSHH/Graphical-Analysis-Answer6.png"}
                         alt="Answer Choice 2"
-                        width={550}
-                        height={550} />
+                        width={250}
+                        height={250} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>C)</p>
                     <img 
                         src={"https://i.ibb.co/MR452mj/Graphical-Analysis-Answer7.png"}
                         alt="Answer Choice 3"
-                        width={550}
-                        height={550} />
+                        width={250}
+                        height={250} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>D)</p>
                     <img 
                         src={"https://i.ibb.co/5jWzJMY/Graphical-Analysis-Answer8.png"}
                         alt="Answer Choice 4"
-                        width={550}
-                        height={550} />
+                        width={250}
+                        height={250} />
 
                     <h4 className="h4-blue-headers" style={{ paddingTop: "75px" }}>Create it!</h4>
 

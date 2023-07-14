@@ -49,7 +49,7 @@ class QuadraticFunction extends React.Component {
                         src={"https://i.ibb.co/xX1sTRh/Quadratic-Function1.jpg"}
                         alt="a Value Impact"
                         className="center-image"
-                        style={{ paddingTop: "50px", paddingBottom: "50px" }}
+                        style={{ paddingTop: "50px", paddingBottom: "50px", width: "60%", minWidth: "250px", height: "auto"}}
                         width={400}
                         height={300} />
 
@@ -72,7 +72,7 @@ class QuadraticFunction extends React.Component {
                         src={"https://i.ibb.co/4Mfddbz/Quadratic-Function2.jpg"}
                         alt="Axis of Symmetry"
                         className="center-image"
-                        style={{ paddingTop: "50px", paddingBottom: "50px" }}
+                        style={{ paddingTop: "50px", paddingBottom: "50px", width: "60%", minWidth: "250px", height: "auto"}}
                         width={300}
                         height={450} />
 

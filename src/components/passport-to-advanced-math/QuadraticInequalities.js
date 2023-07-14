@@ -39,11 +39,16 @@ class QuadraticInequalities extends React.Component {
                     <p className="p-body-small">
                         Just watch the work he shows for problem 1 for now.  Once he gets to the second problem that he works on, you can stop there.
                     </p>
-
-                    <div>
-                        <ReactPlayer 
-                            url="https://www.youtube.com/watch?v=XRlTsrDsHg8&t=207s"
-                        />
+                    
+                    <div className="video-container">
+                        <div className="player-wrapper">
+                            <ReactPlayer
+                                url="https://www.youtube.com/watch?v=XRlTsrDsHg8&t=207s"
+                                className="react-player"
+                                width="100%"
+                                height="100%"
+                            />
+                        </div>
                     </div>
 
                     <p className="p-body-small" style={{ paddingTop: "25px" }}>

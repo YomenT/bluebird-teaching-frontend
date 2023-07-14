@@ -33,7 +33,9 @@ class PolynomialsOfHigherDegree extends React.Component {
                         src={"https://i.ibb.co/p17T5V8/Polynomials-Of-Higher-Degree1.png"}
                         alt="Work shown for handling polynomials of higher degree."
                         width={400}
-                        height={400} />
+                        height={400}
+                        style={{ width: "30%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body-small" style={{ paddingTop: "25px" }}>
                         We factor by grouping in a very similar manner like when we factor quadratics that have an "a" value greater than 1.

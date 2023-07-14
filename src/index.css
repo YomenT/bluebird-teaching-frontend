@@ -236,6 +236,18 @@ a:hover {
   height: auto;
 }
 
+.image-text-container {
+  display: flex;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .image-text-container {
+    flex-direction: column;
+  }
+}
+
 /* Fractions */
 
 .frac {

@@ -30,7 +30,9 @@ class FactoringPart2 extends React.Component {
                         src={"https://i.ibb.co/nDm1QWB/Factoring2.jpg"}
                         alt="Function Notation"
                         width={350}
-                        height={350} />
+                        height={350} 
+                        style={{ width: "30%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className='p-body-small'>
                         <i>Remember that taking the square root of a positive numbers yields two answers: one positive and one negative.</i>

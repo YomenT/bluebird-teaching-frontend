@@ -38,7 +38,9 @@ class RationalExpressionsEquations extends React.Component {
                         src={"https://i.ibb.co/v4kfTpy/Rational-Expression-Equation1.png"}
                         alt="Adding rational expressions problem."
                         width={500}
-                        height={900} />
+                        height={900}
+                        style={{ width: "30%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body-medium" style={{ paddingTop: "25px" }}>
                         Now let's see an example where we can see some of that cancelling out to make things easier.  You'll see that in this scenario, I actually didn't 
@@ -50,7 +52,9 @@ class RationalExpressionsEquations extends React.Component {
                         src={"https://i.ibb.co/zfXbk01/Rational-Expression-Equation2.png"}
                         alt="Adding rational expressions problem."
                         width={500}
-                        height={500} />
+                        height={500}
+                        style={{ width: "30%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body-medium" style={{ paddingTop: "25px" }}>
                         The important take away here is to be patient and flexible.  When solving an equation with rational expressions, you might need to pull out your 
