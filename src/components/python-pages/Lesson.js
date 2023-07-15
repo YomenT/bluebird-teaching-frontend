@@ -71,9 +71,9 @@ class Lesson extends React.Component {
         </div>
         <div className="aboutBodyDiv">
           <div style={{ paddingTop: "25px" }} dangerouslySetInnerHTML={{ __html: lesson.introduction }}/>
-          <h4 className="h4-blue-headers" style={{ paddingTop: "75px", paddingBottom: "10px" }}>Try it!</h4>
+          <h4 className="h4-blue-headers" style={{ paddingTop: "50px", paddingBottom: "10px" }}>Try it!</h4>
           <div dangerouslySetInnerHTML={{ __html: lesson.try_it }}/>
-          <h4 className="h4-blue-headers" style={{ paddingTop: "75px", paddingBottom: "10px" }}>Create it!</h4>
+          <h4 className="h4-blue-headers" style={{ paddingTop: "50px", paddingBottom: "10px" }}>Create it!</h4>
           <div style={{ marginBottom: "150px" }} dangerouslySetInnerHTML={{ __html: lesson.create_it }}/>
         </div>
         <Footer />
