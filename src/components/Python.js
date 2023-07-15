@@ -13,7 +13,7 @@ class Python extends React.Component {
 
                 <Logo />
                 <div className="bodyDiv">
-                    <h2 style={{ paddingBottom: "25px" }}>Python For Non-Engineers</h2>
+                    <h2 style={{ paddingBottom: "25px" }}>PCEP Course at IAR</h2>
                 </div>
 
                 <div className="aboutBodyDiv">

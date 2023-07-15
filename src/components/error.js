@@ -6,7 +6,6 @@ const app = {
   margin: 0,
   padding: 0,
   backgroundColor: "#1b2b44",
-  fontFamily: "Arial, sans-serif",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -27,7 +26,6 @@ const container = {
 const error = {
   fontSize: "clamp(1rem, 5vw, 2rem)",
   color: "#1b2b44",
-  fontFamily: "Arial, sans-serif",
   fontWeight: "bold",
   padding: "20px",
 };
@@ -37,7 +35,6 @@ const p = {
   fontWeight: "500",
   marginBottom: "10px",
   color: "#333",
-  fontFamily: "Arial, sans-serif",
 };
 
 const title = {
@@ -47,7 +44,6 @@ const title = {
   textAlign: "center",
   margin: "20px 0",
   fontWeight: "bold",
-  fontFamily: "Arial, sans-serif",
 };
 
 const span = {
@@ -108,7 +104,6 @@ return (
         position: "fixed",
         bottom: "10px",
         color: "rgb(47, 133, 255)",
-        fontFamily: "Arial, sans-serif",
       }}
     >
       Parakeet stickers created by SoulGIE - Flaticon
