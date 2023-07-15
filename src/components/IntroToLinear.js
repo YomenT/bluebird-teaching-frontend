@@ -36,12 +36,12 @@ class IntroToLinear extends React.Component {
                     <img 
                         src={"https://i.ibb.co/8DRkJJn/Positive-Slope.png"}
                         alt="Positive Slope"
-                        style={{ width: "20%" }} />
+                        style={{ width: "20%", minWidth: "200px", height: "auto" }} />
                     <br />
                     <img 
                         src={"https://i.ibb.co/jMpqks0/Negative-Slope.png"}
                         alt="Negative Slope"
-                        style={{ width: "20%", paddingTop: "25px" }} />
+                        style={{ width: "20%", minWidth: "200px", height: "auto", paddingTop: "25px" }} />
                     <h4 className="h4-blue-headers" style={{ paddingTop: "75px" }}>Try it!</h4>
                     <p className="p-body">
                         1.  The slope of the line with the equation 2y - 2x = 10 is

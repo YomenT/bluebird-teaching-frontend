@@ -49,7 +49,7 @@ class PolynomialsPart3 extends React.Component {
                     <img 
                         src={"https://i.ibb.co/k2HXvyz/PNG-image-4.png"}
                         alt="Function Notation"
-                        style={{ width: "50%" }} />
+                        style={{ width: "50%", minWidth: "200px", height: "auto" }} />
 
                     <h4 className="h4-blue-headers" style={{ paddingTop: "75px" }}>Try it!</h4>
 

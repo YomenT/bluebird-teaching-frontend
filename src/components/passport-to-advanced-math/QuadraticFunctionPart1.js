@@ -24,7 +24,7 @@ class QuadraticFunctionPart1 extends React.Component {
                     <img 
                         src={"https://i.ibb.co/dLCzYHH/Screenshot-3.png"}
                         alt="Sample Quadratic Equation Graph"
-                        style={{ width: "40%" }} />
+                        style={{ width: "40%", minWidth: "200px", height: "auto" }} />
 
                     <p className="p-body" style={{ paddingTop: "25px" }}>
                         Quadratic functions also have a standar form of: <strong>ax<sup>2</sup> + bx + c = 0</strong>
@@ -59,7 +59,7 @@ class QuadraticFunctionPart1 extends React.Component {
                     <img 
                         src={"https://i.ibb.co/3RvFkDf/Standard-Form1.png"}
                         alt="Standard Form"
-                        style={{ width: "40%" }} />
+                        style={{ width: "40%", minWidth: "200px", height: "auto" }} />
 
                     <h4 className="h4-blue-headers" style={{ paddingTop: "75px" }}>Try it!</h4>
 
@@ -68,22 +68,26 @@ class QuadraticFunctionPart1 extends React.Component {
                     <img 
                         src={"https://i.ibb.co/wSYnzm4/Quadratics-Answer2.png"}
                         alt="Answer Choice 1"
-                        style={{ width: "18%" }} />
+                        width={200}
+                        height={200} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>B)</p>
                     <img 
                         src={"https://i.ibb.co/6JhkCBV/Quadratics-Answer3.png"}
                         alt="Answer Choice 2"
-                        style={{ width: "18%" }} />
+                        width={200}
+                        height={200} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>C)</p>
                     <img 
                         src={"https://i.ibb.co/h8NtMB7/Quadratics-Answer1.png"}
                         alt="Answer Choice 3"
-                        style={{ width: "18%" }} />
+                        width={200}
+                        height={200} />
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>D)</p>
                     <img 
                         src={"https://i.ibb.co/rF4Lqzb/Quadratics-Answer4.png"}
                         alt="Answer Choice 4"
-                        style={{ width: "18%" }} />
+                        width={200}
+                        height={200} />
 
                     <p className="p-body" style={{ paddingTop: "25px" }}>2.  Which of the following quadratic equations are written in standard form (Select all that apply)?</p>
                     <p className="p-body-small" style={{ marginLeft: "4%" }}>A)  4x<sup>2</sup> - 4 = 0</p>

@@ -25,7 +25,7 @@ class LinearInequalities extends React.Component {
                     <img 
                         src={"https://i.ibb.co/PCqzx1T/Solving-Linear-Inequality.png"}
                         alt="Linear Inequalities"
-                        style={{ width: "40%" }} />
+                        style={{ width: "40%", minWidth: "200px", height: "auto" }} />
                     <p className="p-body-small" style={{ paddingTop: "25px" }}>
                         <i><strong>Challenge:  </strong> Solve this equation for y in terms of x as if this was 3x -4y = 2.  Identify the exact added step 
                         for solving linear inequalities.</i>

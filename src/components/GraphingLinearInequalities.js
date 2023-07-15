@@ -34,7 +34,7 @@ class GraphingLinearInequalities extends React.Component {
                     <img 
                         src="https://i.ibb.co/KDwb99m/Graphing-Linear-Inequalities-1.png"
                         alt="Graphing Linear Inequalities"
-                        style={{ width: "60%" }} />
+                        style={{ width: "60%", minWidth: "200px", height: "auto" }} />
                     <p className="p-body-small" style={{ paddingTop: "25px" }}>
                         <i><strong>Question:  </strong> What would happen if the equation had a &#8805; sign instead of a >?  What would this change?</i>
                     </p>

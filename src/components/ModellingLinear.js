@@ -48,7 +48,7 @@ class ModellingLinear extends React.Component {
                     <img 
                         src={"https://i.ibb.co/TMwRCrt/Modelling-Explanation.png"}
                         alt="Modelling Explanation"
-                        style={{ width: "40%" }} />
+                        style={{ width: "40%", minWidth: "200px", height: "auto" }} />
                     <p className="p-body-small" style={{ paddingTop: "25px" }}>
                         <i><strong>Question:  </strong> What does the 2 represent?  How can you interpret the 2 in context with the information in the problem?</i>
                     </p>
