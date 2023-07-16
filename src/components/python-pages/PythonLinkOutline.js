@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import Subsets from "../Subsets"
 
 class PythonLinkOutline extends React.Component {
 
@@ -19,7 +20,7 @@ class PythonLinkOutline extends React.Component {
     }
 
   componentDidMount() {
-    fetch("https://adminbluebirdteaching.pythonanywhere.com/lessons/PCEP Course")
+    fetch("https://adminbluebirdteaching.pythonanywhere.com/lessons/" + Subsets.PCEPCourseAtIar)
       .then((response) => response.json())
       .then((data) => {
         this.setState({ lessons: data });
