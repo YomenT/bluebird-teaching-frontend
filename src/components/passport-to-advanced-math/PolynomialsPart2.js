@@ -51,7 +51,7 @@ class PolynomialsPart2 extends React.Component {
                     <img 
                         src={"https://i.ibb.co/q9M24cN/Adding-Polynomials2.png"}
                         alt="Function Notation"
-                        style={{ width: "40%" }} />
+                        style={{ width: "40%", minWidth: "200px", height: "auto" }} />
 
 
                     <p className="p-body" style={{ paddingTop: "25px" }}>
@@ -75,7 +75,7 @@ class PolynomialsPart2 extends React.Component {
                     <img 
                         src={"https://i.ibb.co/YNYnSWh/Adding-Polynomials3.png"}
                         alt="Function Notation"
-                        style={{ width: "50%" }} />
+                        style={{ width: "50%", minWidth: "200px", height: "auto" }} />
 
                     <h4 className="h4-blue-headers" style={{ paddingTop: "75px" }}>Try it!</h4>
 

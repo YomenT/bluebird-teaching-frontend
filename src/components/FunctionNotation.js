@@ -26,7 +26,7 @@ class FunctionNotation extends React.Component {
                     <img 
                         src={"https://i.ibb.co/zP2Ytm0/Function-Notation.png"}
                         alt="Function Notation"
-                        style={{ width: "30%" }} />
+                        style={{ width: "30%", minWidth: "200px", height: "auto" }} />
                     <h4 className="h4-blue-headers" style={{ paddingTop: "75px" }}>Try it!</h4>
                     <p className="p-body">
                         1.  If f(x) = 2x<sup>2</sup> + 5, evaluate f(-3).

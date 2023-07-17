@@ -58,8 +58,8 @@ class VertexForm extends React.Component {
                     <img 
                         src={"https://i.ibb.co/CwNDfy1/Vertex-Form1.jpg"}
                         alt="Work Shown"
-                        width={400}
-                        height={575} />
+                        style={{ width: "40%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body-small" style={{ paddingTop: "25px" }}>Let's summarize the steps below.</p>
 

@@ -49,17 +49,19 @@ class RationalExpressions extends React.Component {
                         </p>
                     </div>
 
-                    <div className="row" style={{ paddingTop: "50px" }}>
-                        <div className="col-4">
+                    <div className="image-text-container">
+                        <div style={{display: "flex", alignItems: "center"}}>
                             <img 
                                 src={"https://i.ibb.co/zXXNZTy/Rational-Expressions1.jpg"}
                                 alt="Adding rational expressions example."
                                 className="mx-auto d-block"
                                 width={400}
-                                height={350} />
+                                height={350}
+                                style={{ width: "110%", minWidth: "250px", maxWidth: "300px", height: "auto"}}
+                            />
                         </div>
 
-                        <div className="col-8">
+                        <div style={{display: "flex", alignItems: "center", padding: "20px"}}>
                             <p className="p-body-xsmall">
                                 In the first line, we have the original problem; we're trying to add those to fractions (also known as rational expressions).  In the 
                                 second line, to the left of the arrow, I am multiplying the top and bottom of <sup>7</sup>&frasl;<sub>x</sub> by 5.  As the right of 
@@ -69,17 +71,19 @@ class RationalExpressions extends React.Component {
                         </div>
                     </div>
 
-                    <div className="row" style={{ paddingTop: "50px" }}>
-                        <div className="col-4">
+                    <div className="image-text-container">
+                        <div style={{display: "flex", alignItems: "center"}}>
                             <img 
                                 src={"https://i.ibb.co/BcG12Tm/Rational-Expressions2.jpg"}
                                 alt="Adding rational expressions example."
                                 className="mx-auto d-block"
                                 width={400}
-                                height={350} />
+                                height={350}
+                                style={{ width: "100%", minWidth: "250px", maxWidth: "300px", height: "auto"}}
+                            />
                         </div>
 
-                        <div className="col-8">
+                        <div style={{display: "flex", flexDirection: "column", alignItems: "center", padding: "20px"}}>
                             <p className="p-body-xsmall">
                                 Again, we'll go line by line.  The first line just contains the original problem; we're trying to add those two rational expressions.  
                                 The second line is where I'm trying to get common denominators.  I multiply the top and bottom of the left fraction by (x - 2), and I 
@@ -95,7 +99,7 @@ class RationalExpressions extends React.Component {
                         </div>
                     </div>
 
-                    <div className="row" style={{ paddingTop: "50px" }}>
+                    <div className="row" style={{paddingTop: "50px"}}>
                         <p className="p-body-small">
                             <i>This lesson involves a lot of foundational skills with fractions.  If you are confused on anything, reach out to us!</i>
                         </p>
@@ -105,8 +109,8 @@ class RationalExpressions extends React.Component {
                         </p>
                     </div>
 
-                    <div className="row" style={{ paddingTop: "50px" }}>
-                        <div className="col-8">
+                    <div className="image-text-container">
+                        <div style={{display: "flex", flexDirection: "column", alignItems: "center", padding: "20px"}}>
                             <p className="p-body-xsmall">
                                 The first line contains the original problem; we're trying to subtract those two rational expressions.  In the second line, I'm getting my 
                                 common denominators: I multiply the top and bottom of the left fraction with x<sup>2</sup>, and I multiply the top and bottom of the right 
@@ -123,34 +127,38 @@ class RationalExpressions extends React.Component {
                             </p>
                         </div>
 
-                        <div className="col-4">
+                        <div style={{display: "flex", alignItems: "center"}}>
                             <img 
                                 src={"https://i.ibb.co/v4TXbMT/Rational-Expressions3.jpg"}
                                 alt="Subtracting rational expressions example."
                                 className="mx-auto d-block"
                                 width={400}
-                                height={350} />
+                                height={350}
+                                style={{ width: "100%", minWidth: "250px", maxWidth: "300px", height: "auto"}}
+                            />
                         </div>
                     </div>
 
-                    <div className="row" style={{ paddingTop: "50px" }}>
+                    <div className="row" style={{paddingTop: "50px"}}>
                         <p className="p-body">
                             <strong>Now let's look at multiplying rational expressions.</strong>  This is going to involve a lot of what we've learned regarding FOILing 
                             and distributing.
                         </p>
                     </div>
 
-                    <div className="row" style={{ paddingTop: "50px" }}>
-                        <div className="col-4">
+                    <div className="image-text-container">
+                        <div style={{display: "flex", alignItems: "center"}}>
                             <img 
                                 src={"https://i.ibb.co/z4ypQYw/Rational-Expressions4.jpg"}
                                 alt="Multiplying rational expressions example."
                                 className="mx-auto d-block"
                                 width={400}
-                                height={350} />
+                                height={350}
+                                style={{ width: "100%", minWidth: "250px", maxWidth: "300px", height: "auto"}}
+                            />
                         </div>
 
-                        <div className="col-8">
+                        <div style={{display: "flex", flexDirection: "column", alignItems: "center", padding: "20px"}}>
                             <p className="p-body-xsmall">
                                 We follow the same steps we do when we're multiplying fractions: multiply straight across all the numerators involved, and multiply all 
                                 the denominators involved.  Basically just multiplying straight across.  This is where we need to remember FOILing and distribution.  We 
@@ -175,8 +183,8 @@ class RationalExpressions extends React.Component {
                         </p>
                     </div>
 
-                    <div className="row" style={{ paddingTop: "50px" }}>
-                        <div className="col-8">
+                    <div className="image-text-container">
+                        <div style={{display: "flex", flexDirection: "column", alignItems: "center", padding: "20px"}}>
                             <p className="p-body-xsmall">
                                 In the first line, I have the original division problem written out.  In the second line, to the left of the equal sign, I flipped the second 
                                 fraction, and I changed the operation to multiplication (following the steps to dividing fractions).  From there, I went ahead and distributed 
@@ -185,13 +193,15 @@ class RationalExpressions extends React.Component {
                             </p>
                         </div>
 
-                        <div className="col-4">
+                        <div style={{display: "flex", alignItems: "center"}}>
                             <img 
                                 src={"https://i.ibb.co/jk9tgW9/Rational-Expressions6.jpg"}
                                 alt="Dividing rational expressions example."
                                 className="mx-auto d-block"
                                 width={400}
-                                height={300} />
+                                height={300}
+                                style={{ width: "100%", minWidth: "250px", height: "auto"}}
+                            />
                         </div>
                     </div>
 
@@ -322,7 +332,9 @@ class RationalExpressions extends React.Component {
                         alt="Create It example."
                         className="mx-auto d-block"
                         width={500}
-                        height={600} />
+                        height={600}
+                        style={{ width: "40%", minWidth: "250px", height: "auto"}}
+                    />
                     
                 </div>
 

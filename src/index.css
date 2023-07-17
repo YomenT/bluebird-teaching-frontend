@@ -217,6 +217,36 @@ a:hover {
   background-color: #5b92e5;
 }
 
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.react-player { 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 500px;
+  min-width: 250px;
+  height: auto;
+}
+
+.image-text-container {
+  display: flex;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .image-text-container {
+    flex-direction: column;
+  }
+}
+
 /* Fractions */
 
 .frac {

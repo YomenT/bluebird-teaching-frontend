@@ -33,10 +33,15 @@ class SatPrep extends React.Component {
                         Unfortunately, my expertise lies in the math section of the SAT.  Until I am able to find additional help with the reading portion of 
                         the SAT, this page will only cover SAT math material.
                     </p>
-                    <div style={{ aspectRatio: "16/9", width: "70%" }}>
-                        <ReactPlayer 
-                            url="https://www.youtube.com/watch?v=5qap5aO4i9A"
-                        />
+                    <div className="video-container">
+                        <div className="player-wrapper">
+                            <ReactPlayer
+                                url="https://www.youtube.com/watch?v=jfKfPfyJRdk"
+                                className="react-player"
+                                width="100%"
+                                height="100%"
+                            />
+                        </div>
                     </div>
                     <h3 className="h3-blue-headers" style={{ paddingTop: "75px", paddingBottom: "10px" }}>How This Works</h3>
                     <p className="p-body">

@@ -42,11 +42,15 @@ class ExponentRules2 extends React.Component {
                     we involve multiple exponent rules in a 
                     single simplification problem.
                     */}
-
-                    <div>
-                        <ReactPlayer 
-                            url="https://www.youtube.com/watch?v=MHeirBPOI6w"
-                        />
+                    <div className="video-container">
+                        <div className="player-wrapper">
+                            <ReactPlayer
+                                url="https://www.youtube.com/watch?v=MHeirBPOI6w"
+                                className="react-player"
+                                width="100%"
+                                height="100%"
+                            />
+                        </div>
                     </div>
                 </div>
                 <Footer />

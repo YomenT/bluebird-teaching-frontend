@@ -28,7 +28,9 @@ class FactoringPart1 extends React.Component {
                         src={"https://i.ibb.co/zPgXYBz/Factoring1.png"}
                         alt="Function Notation"
                         width={600}
-                        height={550} />
+                        height={550} 
+                        style={{ width: "50%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body-small" style={{ paddingTop: "25px" }}>
                         To find the x-intercept in a linear equation, we set y equal to zero.  We're doing the exact same thing when we factor.  We 
@@ -50,13 +52,16 @@ class FactoringPart1 extends React.Component {
                         the Try It problems right after.  For those of you that want a little bit more of a breakdown/explanation, feel free to look at the material 
                         after the video below and before the Try It section.
                     </p>
-
-                    <div>
-                        <ReactPlayer 
-                            url="https://www.youtube.com/watch?v=-4jANGlJRSY&t=1s"
-                        />
+                    <div className="video-container">
+                        <div className="player-wrapper">
+                            <ReactPlayer
+                                url="https://www.youtube.com/watch?v=-4jANGlJRSY&t=1s"
+                                className="react-player"
+                                width="100%"
+                                height="100%"
+                            />
+                        </div>
                     </div>
-
                     <p className="p-body-small" style={{ paddingTop: "25px" }}>
                         In the video, the speaker goes through many examples you might encounter when factoring a trinomial.  However, try to make a summary of this video.  Try 
                         to think of a set of steps you'd use to summarize factoring a trinomial.  You'll actually be doing this in the Create It section too.

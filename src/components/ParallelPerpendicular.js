@@ -72,7 +72,7 @@ class ParallelPerpendicular extends React.Component {
                     <img 
                         src={"https://i.ibb.co/y4f12X8/Perpendicular-Problem-Crop.png"}
                         alt="Perpendicular System of Linear Equations"
-                        style={{ width: "30%" }} />
+                        style={{ width: "30%", minWidth: "200px", height: "auto" }} />
                     <p className="p-body" style={{ paddingTop: "25px" }}>
                         What value of a in the second equation would make these two lines perpendicular to each other?
                     </p>

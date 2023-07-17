@@ -36,8 +36,8 @@ class QuadraticFormula extends React.Component {
                     <img 
                         src={"https://i.ibb.co/dM4xwyD/Quadratic-Formula1.png"}
                         alt="The Quadratic Formula"
-                        width={325}
-                        height={175} />
+                        style={{ width: "30%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body" style={{ paddingTop: "30px" }}>
                         If you haven't caught it, all those variables (a, b, and c) all come straight from the quadratic equation that you're working with.  Remember 
@@ -53,8 +53,8 @@ class QuadraticFormula extends React.Component {
                     <img 
                         src={"https://wikimedia.org/api/rest_v1/media/math/render/svg/6a1536aafb8b9a1e6eb3afb5a0982a65b7f63ca4"}
                         alt="The Two Solutions"
-                        width={411}
-                        height={61} />
+                        style={{ width: "40%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body-small" style={{ paddingTop: "30px" }}>
                         <i>
@@ -70,8 +70,8 @@ class QuadraticFormula extends React.Component {
                     <img 
                         src={"https://i.ibb.co/M5yMXGb/Quadratic-Formula3.png"}
                         alt="Showing work"
-                        width={550}
-                        height={650} />
+                        style={{ width: "40%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body" style={{ paddingTop: "30px" }}>
                         Obviously, it's not going to take that many steps every time; I just did every single thing one step at a time.  If you have a calculator handy, 

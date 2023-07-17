@@ -23,10 +23,15 @@ class PolynomialsPart1 extends React.Component {
                         Click <a href={"https://www.mathsisfun.com/definitions/like-terms.html"} target={"_blank"} className="anchor">here</a> for a website that gives a nice 
                         summary.  Also, take a look at the following video.  The speaker goes through a nice challenging problem for you.  
                     </p>
-                    <div>
-                        <ReactPlayer 
-                            url="https://youtu.be/FNnmseBlvaY"
-                        />
+                    <div className="video-container">
+                        <div className="player-wrapper">
+                            <ReactPlayer
+                                url="https://youtu.be/FNnmseBlvaY"
+                                className="react-player"
+                                width="100%"
+                                height="100%"
+                            />
+                        </div>
                     </div>
                     <p className="p-body" style={{ paddingTop: "25px" }}>
                         Keep in mind that in the SAT, you're probably not going to get a lot of questions where you just have to combine like terms.  Combining 

@@ -32,21 +32,26 @@ class QuadraticFunctionGraphicalAnalysis2 extends React.Component {
                         src={"https://i.ibb.co/G0xDZjD/Graphical-Analysis3.png"}
                         alt="Answer Choice 1"
                         width={600}
-                        height={600} />
+                        height={600}
+                        style={{ width: "60%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body" style={{ paddingTop: "30px" }}><i>4x<sup>2</sup> = y</i></p>
                     <img 
                         src={"https://i.ibb.co/601Ts2D/Graphical-Analysis4.png"}
                         alt="Answer Choice 1"
                         width={600}
-                        height={600} />
-
+                        height={600}
+                        style={{ width: "60%", minWidth: "250px", height: "auto"}}
+                    />
                     <p className="p-body" style={{ paddingTop: "30px" }}><i>0.5x<sup>2</sup> = y</i></p>
                     <img 
                         src={"https://i.ibb.co/c87wmyW/Graphical-Analysis5.png"}
                         alt="Answer Choice 1"
                         width={600}
-                        height={600} />
+                        height={600}
+                        style={{ width: "60%", minWidth: "250px", height: "auto"}}
+                    />
 
                     <p className="p-body" style={{ paddingTop: "50px" }}>
                         As you might have noticed, making the "a" greater than 1 makes the graph skinnier; while making the "a" value a fraction between 1 and 0 makes 

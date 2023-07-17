@@ -29,11 +29,15 @@ class PolynomialsPart3 extends React.Component {
                         Watch this short video of this awesome person explaining the foil method.  I just chose this video because it's short and sweet.  There's 
                         plenty more videos online that go more in depth if you need them.  As always, feel free to reach out with any questions!
                     </p>
-
-                    <div>
-                        <ReactPlayer 
-                            url="https://www.youtube.com/watch?v=Axv7cqezipY"
-                        />
+                    <div className="video-container">
+                        <div className="player-wrapper">
+                            <ReactPlayer
+                                url="https://www.youtube.com/watch?v=Axv7cqezipY"
+                                className="react-player"
+                                width="100%"
+                                height="100%"
+                            />
+                        </div>
                     </div>
 
                     <p className="p-body-small" style={{ paddingTop: "25px" }}>
@@ -45,7 +49,7 @@ class PolynomialsPart3 extends React.Component {
                     <img 
                         src={"https://i.ibb.co/k2HXvyz/PNG-image-4.png"}
                         alt="Function Notation"
-                        style={{ width: "50%" }} />
+                        style={{ width: "50%", minWidth: "200px", height: "auto" }} />
 
                     <h4 className="h4-blue-headers" style={{ paddingTop: "75px" }}>Try it!</h4>
 
