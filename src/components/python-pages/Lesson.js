@@ -28,18 +28,18 @@ class Lesson extends React.Component {
 
   attachEventListeners() {
     const options = document.querySelectorAll("li");
-    for (let i = 3; i < options.length; i++) {
+    for (let i = 0; i < options.length; i++) {
       let option = options[i];
-      if (option.parentElement.style.listStyleType == "upper-alpha") {
-        if (option.id == "correct") {
-          option.addEventListener("click", () => {
-            option.classList.add("correct");
-          });
-        } else {
-          option.addEventListener("click", () => {
-            option.classList.add("incorrect");
-          });
-        }
+      if (option.id == "correct") {
+        option.style.cursor = "pointer";
+        option.addEventListener("click", () => {
+          option.classList.add("correct");
+        });
+      } else if (option.id == "incorrect") {
+        option.style.cursor = "pointer";
+        option.addEventListener("click", () => {
+          option.classList.add("incorrect");
+        });
       }
     };
   }
