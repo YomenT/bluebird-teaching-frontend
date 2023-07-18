@@ -31,7 +31,7 @@ class PythonLinkOutline extends React.Component {
         return (
             <div>
                 <ol className="list-medium">
-                    <li><Link to="/python/introduction" style={{ color: "#365789" }} onMouseOver={this.changeLinkColorEnter} onMouseOut={this.changeLinkColorLeave}>How To Code In Python</Link></li>
+                    {/* <li><Link to="/python/introduction" style={{ color: "#365789" }} onMouseOver={this.changeLinkColorEnter} onMouseOut={this.changeLinkColorLeave}>How To Code In Python</Link></li> */}
                     {lessons.map((lesson, index)  => (
                         <li key={index}>
                             <Link to={`/${lesson.subset_name}/${index + 1}/`} style={{ color: '#365789' }} onMouseOver={this.changeLinkColorEnter} onMouseOut={this.changeLinkColorLeave}>

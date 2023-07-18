@@ -125,6 +125,11 @@ a:hover {
   font-size: 21px;
 }
 
+.list-small {
+  color: #365789;
+  font-size: 17px;
+}
+
 .glow {
   font-size: 30px;
   color: #fff;

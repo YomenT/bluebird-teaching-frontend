@@ -34,7 +34,7 @@ class Python extends React.Component {
                         <strong>Note: </strong> This page is a work in progress.  I plan to have this page finished by the beginning of the summer of 2023.
                     </p>
 
-                    <hr style={{ width: '100%', textAlign: "center", marginBottom: "150px", marginTop: "150px", backgroundColor: "#121d2d" }}></hr>
+                    <hr style={{ width: '100%', textAlign: "center", marginBottom: "100px", marginTop: "100px", backgroundColor: "#121d2d" }}></hr>
 
                     <PythonLinkOutline />
 
