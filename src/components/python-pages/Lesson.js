@@ -20,11 +20,29 @@ class Lesson extends React.Component {
     )
       .then((response) => response.json())
       .then((data) => {
-        this.setState({ lesson: data });
+        this.setState({ lesson: data }, () => {
+          this.attachEventListeners();
+        });
       });
   }
 
-
+  attachEventListeners() {
+    const options = document.querySelectorAll("li");
+    for (let i = 0; i < options.length; i++) {
+      let option = options[i];
+      if (option.id == "correct") {
+        option.style.cursor = "pointer";
+        option.addEventListener("click", () => {
+          option.classList.add("correct");
+        });
+      } else if (option.id == "incorrect") {
+        option.style.cursor = "pointer";
+        option.addEventListener("click", () => {
+          option.classList.add("incorrect");
+        });
+      }
+    };
+  }
 
     setClassNamesToHTML = (content) => {
         const { lesson } = this.state;

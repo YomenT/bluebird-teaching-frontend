@@ -252,6 +252,14 @@ a:hover {
   }
 }
 
+.correct {
+ color: #009924;
+}
+
+.incorrect {
+  color: #cb0000;
+}
+
 /* Fractions */
 
 .frac {
