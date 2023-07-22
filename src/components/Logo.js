@@ -1,9 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./css/Logo.css"
 import { Link } from "react-router-dom";
+import "firebase/auth";
+import { auth, logout} from "../firebase.js";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setLoggedIn(true);
+      } else {
+        setLoggedIn(false);
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+  const handleLogout = () => {
+    logout();
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -38,6 +59,17 @@ const Navbar = () => {
             Focus Log
           </button>
         </Link>
+        {loggedIn ? (
+          <button type="button" className="button logout" onClick={handleLogout}>
+            Logout
+          </button>
+        ) : (
+          <Link to="/login">
+            <button type="button" className="button login-button">
+              Login
+            </button>
+          </Link>
+        )}
       </div>
       <div class="navbar-menu-icon" onClick={toggleMenu}>
         <div class="menu-line"></div>

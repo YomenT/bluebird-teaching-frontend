@@ -9,6 +9,10 @@ import FocusLog from './FocusLog'
 import Resources from './Resources'
 import SatPrep from './SatPrep'
 import NotFound from "./error";
+import Login from "./Login";
+import Register from "./Register";
+import PasswordReset from "./PasswordReset";
+
 
 // Heart of Algebra
 import IntroductionToHeartOfAlgebra from './IntroductionToHeartOfAlgebra';
@@ -61,6 +65,9 @@ const Main = () => {
     <Switch> 
       {/* Main Links */}
       <Route exact path='/' component={HomePage}></Route>
+      <Route exact path="/login" component={Login}></Route>
+      <Route exact path="/register" component={Register}></Route>
+      <Route exact path="/reset" component={PasswordReset}></Route>
       <Route exact path='/about' component={About}></Route>
       <Route exact path='/contact' component={Contact}></Route>
       <Route exact path='/about_resources' component={AboutResources}></Route>
