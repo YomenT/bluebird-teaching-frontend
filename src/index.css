@@ -260,6 +260,15 @@ a:hover {
   color: #cb0000;
 }
 
+code {
+  color: #fff;
+  background-color: #1b2b44;
+  outline: 2px solid #5b92e5;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
 /* Fractions */
 
 .frac {
