@@ -1,0 +1,44 @@
+
+.form-container {
+    max-width: 900px;
+    padding: 20px;
+    margin: 50px auto auto;
+    border: 1px solid #fff;
+    border-radius: 5px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1b2b44;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  
+  .form-item {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .form-row {
+      flex-wrap: wrap;
+    }
+  
+    .form-item {
+      flex: 100%;
+      margin-right: 0;
+    }
+  }
