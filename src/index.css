@@ -41,11 +41,6 @@ label {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-a {
-  color: #fffAF0;
-  text-decoration: none;
-}
-
 a:hover {
   color: #5b92e5;
   text-decoration: none;
@@ -203,6 +198,10 @@ a:hover {
   font-size: 16px;
 }
 
+button:focus {
+  outline: 2px solid #fff;
+} 
+
 .outline-button {
   display: inline-block;
   background-color: transparent;
@@ -220,6 +219,26 @@ a:hover {
 .outline-button:hover {
   color: white;
   background-color: #5b92e5;
+}
+
+.login-button {
+  background-color: #00b256;
+  border: 1px solid #00b256;
+}
+
+.login-button:hover {
+  background-color: #008540;
+  border: 1px solid #008540;
+}
+
+.logout {
+  background-color: #fd6e6e;
+  border: 1px solid #fd6e6e;
+}
+
+.logout:hover {
+  background-color: #ff5151;
+  border: 1px solid #ff5151;
 }
 
 .player-wrapper {

@@ -33,7 +33,7 @@
       display: none;
     }
   
-    .navbar-buttons .outline-button {
+    .navbar-buttons .outline-button, .button {
       width: 100%;
     }
   
