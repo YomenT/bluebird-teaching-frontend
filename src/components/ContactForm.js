@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
-import "./css/ContactForm.css"
+import "./css/ContactForm.css";
+import { showNotification } from "../firebase.js";
 
 const ContactForm = () => {
   const formRef = useRef();
@@ -18,12 +19,13 @@ const ContactForm = () => {
       const responseData = await response.json();
 
       if (response.ok) {
-        console.log(responseData.message);
+        showNotification(responseData.message);
+        formRef.current.reset();
       } else {
-        console.error(responseData.error);
+        showNotification(responseData.error);
       }
     } catch (error) {
-      console.error('Error:', error);
+      showNotification("Please try again later");
     }
   };
 

@@ -9,6 +9,7 @@ class Contact extends React.Component {
         return (
             <div>
                 <Logo />
+                <div className="notification"></div>
                 <div className="bodyDiv">
                     <h2 style={{ paddingBottom: "25px" }}>Get in Touch!</h2>
                 </div>
