@@ -63,6 +63,13 @@ class Lesson extends React.Component {
         const paragraphs = container.querySelectorAll("p");
         paragraphs.forEach((paragraph) => { paragraph.classList.add("p-body-medium"); });
 
+        const images = container.querySelectorAll("img");
+        images.forEach((image) => { 
+          image.style.minWidth = "200px"; 
+          image.style.height = "auto"; 
+          image.style.width = "40%";
+        });
+        
   return container.innerHTML;
 };
 
