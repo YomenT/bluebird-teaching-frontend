@@ -1,0 +1,56 @@
+.lesson-navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.lesson-navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: clamp(.5rem, 3vw, 1rem);
+}
+
+.lesson-navigation span {
+    color: white;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: clamp(.5rem, 3vw, 1rem);
+}
+
+.dropbtn {
+    position: relative;
+    color: white;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: clamp(.5rem, 3vw, 1rem);
+    border: none;
+    white-space: nowrap;
+}
+
+.dropdown-content {
+    position: absolute;
+    left: 0;
+    top: 27px;
+    background-color: #1b2b44;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    text-align: left;
+    padding: 10px;
+    gap: 2px;
+    border: 2px solid white;
+    box-shadow: 1px 8px 20px 0px black;
+}
+
+.dropdown-content a {
+    font-size: clamp(.8rem, 3vw, 1rem);
+}
+
+.dropdown-content a:hover {
+    color: #53a1ff;
+}
+
+.fa-angle-down {
+    margin: 0 0 0 10px;
+}

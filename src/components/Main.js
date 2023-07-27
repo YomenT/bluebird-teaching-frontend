@@ -74,7 +74,7 @@ const Main = () => {
       <Route exact path='/focus_log' component={FocusLog}></Route>
       <Route exact path='/resources' component={Resources}></Route>
       <Route exact path='/satprep' component={SatPrep}></Route>
-      <Route exact path='/python' component={Python}></Route>
+      <Route exact path='/PCEP Course' component={Python}></Route>
       <Route exact path='/chains-series' component={ChainsSeriesPdfPage}></Route>
 
       {/* Heart of Algebra */}
@@ -118,8 +118,8 @@ const Main = () => {
       <Route exact path='/passport_to_advanced_math/inequalities_with_rational_expressions' component={RationalExpressionsInequalities}></Route>
 
       {/* Python */}
-      <Route exact path='/python' component={Python}></Route>
-      <Route exact path='/python/introduction' component={HowToCodePython}></Route>
+      <Route exact path='/PCEP Course' component={Python}></Route>
+      <Route exact path='/PCEP Course/introduction' component={HowToCodePython}></Route>
       <Route exact path="/:subset/:lessonId/" component={Lesson} />
       <Route component={NotFound} />
     </Switch>
