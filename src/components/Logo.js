@@ -49,7 +49,7 @@ const Navbar = () => {
             SAT Prep
           </button>
         </Link>
-        <Link to="/python">
+        <Link to="/PCEP Course">
           <button type="button" class="outline-button">
             PCEP Course at IAR
           </button>
