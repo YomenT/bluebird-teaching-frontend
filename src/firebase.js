@@ -80,7 +80,7 @@ const registerWithEmailAndPassword = async (name, email, password, userType) => 
         name,
         authProvider: "local",
         email,
-        userType,
+        userType
       });
     } catch (err) {
       showNotification(err);

@@ -18,7 +18,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const [userType, setUserType] = useState("");
+  const [userType, setUserType] = useState("student");
   // const [institution, setInstitution] = useState("");
   const [user, loading, error] = useAuthState(auth);
   const history = useHistory();
