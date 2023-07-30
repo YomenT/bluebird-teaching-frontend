@@ -102,28 +102,6 @@ const Lesson = (props) => {
   lesson.try_it = setClassNamesToHTML(lesson.try_it);
   lesson.create_it = setClassNamesToHTML(lesson.create_it);
 
-  const container = document.createElement("div");
-  container.innerHTML = content;
-
-  const unorderedLists = container.querySelectorAll("ul");
-  unorderedLists.forEach((unorderedList) => { unorderedList.classList.add("list-small"); });
-
-  const orderedLists = container.querySelectorAll("ol");
-  orderedLists.forEach((orderedList) => { orderedList.classList.add("list-medium"); });
-
-  const anchors = container.querySelectorAll("a");
-  anchors.forEach((anchor) => { anchor.classList.add("anchor"); });
-
-  const paragraphs = container.querySelectorAll("p");
-  paragraphs.forEach((paragraph) => { paragraph.classList.add("p-body-medium"); });
-
-  const images = container.querySelectorAll("img");
-  images.forEach((image) => { 
-    image.style.minWidth = "200px"; 
-    image.style.height = "auto";
-  });
-        
-  return container.innerHTML;
   return (
     <div>
       <Logo />
