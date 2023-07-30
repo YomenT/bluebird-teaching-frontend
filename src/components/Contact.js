@@ -1,13 +1,15 @@
 import React from 'react'
+import ContactForm from './ContactForm';
 
 import Logo from './Logo'
 import Footer from './Footer'
 
 class Contact extends React.Component {
-    render() {
+    render() {        
         return (
             <div>
                 <Logo />
+                <div className="notification"></div>
                 <div className="bodyDiv">
                     <h2 style={{ paddingBottom: "25px" }}>Get in Touch!</h2>
                 </div>
@@ -39,9 +41,9 @@ class Contact extends React.Component {
                     </ul>
                     <li>Just any education experience.</li>
                 </ul>
-                <h4 style={{ paddingTop: "25px", paddingBottom: "25px" }}>Email: &nbsp;<a href="mailto:yomen.tohmaz.edu@gmail.com" className="anchor">yomen.tohmaz.edu@gmail.com</a></h4>
                 <p className="p-body"><small>We can't emphasize enough how much we need experienced lesson planners.  We hope to help out teachers by producing lesson plans 
                 a wide variety of topics.  To do this, we need experienced lesson planners.  <b>If you have expertise in lesson planning, your help is certainly needed!</b></small></p>
+                <ContactForm />
                 </div>
                 <Footer />
             </div>

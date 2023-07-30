@@ -57,11 +57,14 @@
     width: 50%;
     position: fixed;
     top: -900px;
+    left: 0;
+    right: 0;
     padding: 10px;
     text-align: center;
     text-overflow: ellipsis;
     border-radius: 5px;
     color: white;
+    margin: auto;
 }
 
 .animated {
