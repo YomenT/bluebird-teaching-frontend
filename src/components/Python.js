@@ -1,5 +1,5 @@
 import React from "react";
-
+import ContactForm from './ContactForm';
 import Logo from './Logo'
 import Footer from './Footer'
 
@@ -28,6 +28,11 @@ class Python extends React.Component {
                         The content below is made in coordination with an in person course at the Islamic Association of Raleigh.  However, it's certainly 
                         not a bad place to go to; even if you're not attending the in person portion.  
                     </p>
+                    <p className="p-body-small" style={{ fontStyle: "italic", textAlign: "center", paddingTop: "75px", paddingBottom: "10px" }}>
+                          Use the form below to ask any questions related to the PCEP Course. 
+                          You can either upload your code by attaching files or simply copy and paste it into the message field.
+                    </p>
+                    <ContactForm/>
 
                     <hr style={{ width: '100%', textAlign: "center", marginBottom: "100px", marginTop: "100px", backgroundColor: "#121d2d" }}></hr>
 
