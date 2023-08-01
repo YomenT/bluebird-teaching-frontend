@@ -12,7 +12,7 @@ import NotFound from "./error";
 import Login from "./Login";
 import Register from "./Register";
 import PasswordReset from "./PasswordReset";
-
+import TeacherCorner from "./teacher-components/TeacherCorner"
 
 // Heart of Algebra
 import IntroductionToHeartOfAlgebra from './IntroductionToHeartOfAlgebra';
@@ -76,6 +76,7 @@ const Main = () => {
       <Route exact path='/satprep' component={SatPrep}></Route>
       <Route exact path='/PCEP Course' component={Python}></Route>
       <Route exact path='/chains-series' component={ChainsSeriesPdfPage}></Route>
+      <Route exact path='/teacher-corner' component={TeacherCorner}></Route>
 
       {/* Heart of Algebra */}
       <Route exact path='/heart_of_algebra/about' component={IntroductionToHeartOfAlgebra}></Route>
