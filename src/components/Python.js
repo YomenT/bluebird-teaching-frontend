@@ -10,7 +10,7 @@ class Python extends React.Component {
     render() {
         return (
             <div>
-
+                <div className="notification"></div>
                 <Logo />
                 <div className="bodyDiv">
                     <h2 style={{ paddingBottom: "25px" }}>PCEP Course at IAR</h2>
