@@ -27,12 +27,15 @@
   background-color: #a5c8df;
   height: 100%;
   width: 60%;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px;
 }
 
 .form-row {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+  margin: 0;
+  gap: 10px;
 }
 
 .form-label {
@@ -52,14 +55,35 @@
 
 .form-item {
   flex: 1;
-  margin-right: 10px;
 }
 
 .email-button {
   background-color: #1B2B44;
 }
 
-@media screen and (max-width: 650px) {
+.more-info {
+  display: inline;
+  position: relative;
+}
+
+.more-info:hover::after {
+  content: 'Two payments: half at start date and half at end date';
+  color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: #1B2B44;
+  display: inline-block;
+  width: 150px;
+  height: max-content;
+  margin: auto;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 800px) {
   .form-row {
     flex-wrap: wrap;
   }

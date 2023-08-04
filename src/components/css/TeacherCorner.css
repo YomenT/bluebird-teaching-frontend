@@ -1,0 +1,18 @@
+.Collapsible {
+    background-color: #1B2B44;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+
+.Collapsible__trigger {
+    font-size: 20px;
+    color: #fff;
+    margin: 10px;
+    line-height: 40px;
+}
+
+.Collapsible__contentInner {
+    padding: 10px;
+    background-color: #a5c8df;
+    border-radius: 0 0 5px 5px;
+}
