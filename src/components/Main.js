@@ -7,6 +7,7 @@ import Contact from './Contact'
 import AboutResources from './OtherResources'
 import FocusLog from './FocusLog'
 import Resources from './Resources'
+import TeacherCorner from './TeacherCorner'
 import SatPrep from './SatPrep'
 import NotFound from "./error";
 import Login from "./Login";
@@ -72,6 +73,7 @@ const Main = () => {
       <Route exact path='/contact' component={Contact}></Route>
       <Route exact path='/about_resources' component={AboutResources}></Route>
       <Route exact path='/focus_log' component={FocusLog}></Route>
+      <Route exact path='/teacher-corner' component={TeacherCorner}></Route>
       <Route exact path='/resources' component={Resources}></Route>
       <Route exact path='/satprep' component={SatPrep}></Route>
       <Route exact path='/PCEP Course' component={Python}></Route>

@@ -2,16 +2,24 @@ import React, { useState, useEffect } from "react";
 import "./css/Logo.css"
 import { Link } from "react-router-dom";
 import "firebase/auth";
-import { auth, logout} from "../firebase.js";
+import { auth, logout, db } from "../firebase.js";
+import { doc, getDoc } from "firebase/firestore";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [userType, setUserType] = useState("student");
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setLoggedIn(true);
+        const docRef = doc(db, "users", user.uid);
+        getDoc(docRef).then(docSnap => {
+        if (docSnap.exists()) {
+          setUserType(docSnap.data().userType);
+        }
+      });
       } else {
         setLoggedIn(false);
       }
@@ -60,9 +68,18 @@ const Navbar = () => {
           </button>
         </Link>
         {loggedIn ? (
-          <button type="button" className="button logout" onClick={handleLogout}>
-            Logout
-          </button>
+          <>
+            {userType === "teacher" && (
+              <Link to="/teacher-corner">
+                <button type="button" className="outline-button">
+                  Teacher Corner
+                </button>
+              </Link>
+            )}
+            <button type="button" className="button logout" onClick={handleLogout}>
+              Logout
+            </button>
+          </>
         ) : (
           <Link to="/login">
             <button type="button" className="button login-button">
