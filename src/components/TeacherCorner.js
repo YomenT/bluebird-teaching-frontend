@@ -43,7 +43,7 @@ function TeacherCorner() {
 	}, [user, loading, userType]);
 
 	return (
-		<div className="teacher-corner-root">
+		<div>
 			<Logo />
 			<div className="notification"></div>
 			<div className="bodyDiv">
