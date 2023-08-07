@@ -67,11 +67,6 @@ const Navbar = () => {
             Focus Log
           </button>
         </Link>
-        <Link to="/teacher-corner">
-          <button type="button" class="outline-button">
-            Teacher Corner
-          </button>
-        </Link>
         {loggedIn ? (
           <>
             {userType === "teacher" && (
