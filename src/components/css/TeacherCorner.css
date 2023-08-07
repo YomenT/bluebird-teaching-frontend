@@ -16,3 +16,8 @@
     background-color: #a5c8df;
     border-radius: 0 0 5px 5px;
 }
+
+.aboutBodyDiv {
+    display: flex;
+    flex-direction: column;
+  }

@@ -53,11 +53,23 @@ function TeacherCorner() {
 				<p class="p-body">We're so excited to have you onboard with us!</p>
 				<p class="p-body">This page should contain all the tools you need to get involved with us.</p>
 				<Collapsible trigger="Initiate a Contract">
-					<p class="p-body-small">Use the form below to initiate a contract</p>
+					<p class="p-body-small">
+						Have an idea for a resource that you think will be helpful, or an existing 
+						resource that you'd like to share with us?  Use this form to propose your idea/resource 
+						for a contract.  Contracts are a way for us to onboard resources from teachers, and 
+						a way for teachers to get paid for their resources!
+					</p>
+					<p className="p-body-small">
+						Fill out the form below with appropriate details that fit your resource, and we will review the 
+						details and get back to you as soon as possible.
+					</p>
 					<ContractForm/>					
 				</Collapsible>
 				<Collapsible trigger="Upload a Resource">
-					<p class="p-body-small">Use the form below to upload a resource</p>
+					<p class="p-body-small">
+						Once you've gotten confirmation for contract approval, and your resource is complete, 
+						please use the form below to upload it.
+					</p>
 					<UploadResourceForm/>
 				</Collapsible>
 			</div>
