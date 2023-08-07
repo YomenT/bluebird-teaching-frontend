@@ -46,6 +46,7 @@ const ContactForm = () => {
         ref={formRef}
         onSubmit={sendEmail}
         className="form-container p-body-xsmall"
+        style={{"borderTopLeftRadius": 0, "borderBottomLeftRadius": 0}}
       >
         <div className="form-row">
           <div className="form-item">
