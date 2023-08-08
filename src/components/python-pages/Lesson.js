@@ -113,11 +113,21 @@ const Lesson = (props) => {
             {showDropdown && (
               <div ref={dropdownRef} className="dropdown-content">
                 <Link to={`/${subset}`}>All Lessons</Link>
-                {lessonList.map((lessons, index) => (
-                  <Link key={lessons.id} to={`/${subset}/${index + 1}`}>
-                    {lessons.title}
-                  </Link>
-                ))}
+                {lessonList.map((lessons, index) => {
+                  if (lessons.completed) {
+                    return (
+                      <Link key={lessons.id} to={`/${subset}/${index + 1}`}>
+                        {lessons.title}
+                      </Link>
+                    )
+                  } else {
+                    return (
+                      <div style={{"color": "lightgray"}}>
+                        {lessons.title + " - In Progress"}
+                      </div>
+                    )
+                  }
+                  })}
               </div>
             )}
           </button>
