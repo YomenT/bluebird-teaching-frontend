@@ -67,23 +67,26 @@ function PythonLinkOutline() {
             <ol className="list-medium lessons-container">
                 {/* <li><Link to="/python/introduction" style={{ color: "#365789" }} onMouseOver={changeLinkColorEnter} onMouseOut={changeLinkColorLeave}>How To Code In Python</Link></li> */}
                 {lessons.map((lesson, index) => {
+                    const isLessonCompleted = userCompletedLessons.includes(lesson.id);
+                    const titleText = isLessonCompleted ?"Mark as unvisited" : "Mark as visited"
+
                     if (lesson.completed) {
                         return (
                             <li key={index} className="lesson-item">
                                 <Link className="lesson-link" to={`/${lesson.subset_name}/${index + 1}/`} style={{ color: '#365789'}} onMouseOver={changeLinkColorEnter} onMouseOut={changeLinkColorLeave}>
                                     {lesson.title}
                                 </Link>
-                                {user ? (
-                                    <input
-                                        className="lesson-checkbox"
-                                        type="checkbox"
-                                        checked={userCompletedLessons.includes(lesson.id)}
-                                        onChange={() =>
-                                            handleLessonCompletion(lesson.id, !userCompletedLessons.includes(lesson.id))
-                                        }
-                                    />
-                                ) : (
-                                    <></>
+                                {user && (
+                                    <div className="lesson-status">
+                                        {isLessonCompleted && <span className="visited-text">Visited</span>}
+                                        <input
+                                            className="lesson-checkbox"
+                                            type="checkbox"
+                                            checked={isLessonCompleted}
+                                            onChange={() => handleLessonCompletion(lesson.id, !isLessonCompleted)}
+                                            title={titleText}
+                                        />
+                                    </div>
                                 )}
                             </li>
                         );
