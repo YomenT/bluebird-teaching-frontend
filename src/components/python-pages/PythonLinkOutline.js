@@ -64,28 +64,32 @@ function PythonLinkOutline() {
 
     return (
         <div>
-            <ol className="list-medium">
+            <ol className="list-medium lessons-container">
                 {/* <li><Link to="/python/introduction" style={{ color: "#365789" }} onMouseOver={changeLinkColorEnter} onMouseOut={changeLinkColorLeave}>How To Code In Python</Link></li> */}
                 {lessons.map((lesson, index) => {
                     if (lesson.completed) {
                         return (
-                            <li key={index}>
-                                <input
-                                    type="checkbox"
-                                    checked={userCompletedLessons.includes(lesson.id)}
-                                    style={{"margin": "auto 10px"}}
-                                    onChange={() =>
-                                        handleLessonCompletion(lesson.id, !userCompletedLessons.includes(lesson.id))
-                                    }
-                                />
-                                <Link to={`/${lesson.subset_name}/${index + 1}/`} style={{ color: '#365789' }} onMouseOver={changeLinkColorEnter} onMouseOut={changeLinkColorLeave}>
+                            <li key={index} className="lesson-item">
+                                <Link className="lesson-link" to={`/${lesson.subset_name}/${index + 1}/`} style={{ color: '#365789'}} onMouseOver={changeLinkColorEnter} onMouseOut={changeLinkColorLeave}>
                                     {lesson.title}
                                 </Link>
+                                {user ? (
+                                    <input
+                                        className="lesson-checkbox"
+                                        type="checkbox"
+                                        checked={userCompletedLessons.includes(lesson.id)}
+                                        onChange={() =>
+                                            handleLessonCompletion(lesson.id, !userCompletedLessons.includes(lesson.id))
+                                        }
+                                    />
+                                ) : (
+                                    <></>
+                                )}
                             </li>
                         );
                     } else {
                         return (
-                            <li key={index} style={{ color: "#728fab" }}>
+                            <li className="lesson-link lesson-item" key={index} style={{ color: "#728fab" }}>
                                 {lesson.title + " - In Progress"}
                             </li>
                         );
