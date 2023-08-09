@@ -5,6 +5,10 @@ import Footer from "../Footer";
 import "../css/Lesson.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import Prism from "prismjs";
+import 'prismjs/components/prism-python';
+import "../css/prism.css";
+
 
 const Lesson = (props) => {
   const { match } = props;
@@ -24,6 +28,10 @@ const Lesson = (props) => {
       setShowDropdown(false);
     }
   };
+  
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [lessonList]);
 
   useEffect(() => {
     fetch(
@@ -89,6 +97,12 @@ const Lesson = (props) => {
     const paragraphs = container.querySelectorAll("p");
     paragraphs.forEach((paragraph) => {
       paragraph.classList.add("p-body-medium");
+    });
+
+    const codeBlocks = container.querySelectorAll("code");
+    codeBlocks.forEach((block) => {
+      block.classList.add("language-python");
+      block.classList.add("p-body-medium");
     });
 
     return container.innerHTML;

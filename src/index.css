@@ -281,12 +281,13 @@ button:focus {
 }
 
 code {
-  color: #fff;
-  background-color: #1b2b44;
-  outline: 2px solid #5b92e5;
-  padding: 3px 10px;
-  border-radius: 4px;
-  margin: 0 5px;
+  padding: 2px 5px!important;
+  white-space : pre-wrap !important;
+  vertical-align: middle;
+}
+
+pre code {
+  white-space: pre!important;
 }
 
 /* Fractions */
