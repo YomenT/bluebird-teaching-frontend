@@ -8,6 +8,9 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db, auth } from "../../firebase.js";
 import { useAuthState } from "react-firebase-hooks/auth";
+import Prism from "prismjs";
+import 'prismjs/components/prism-python';
+import "../css/prism.css";
 
 const Lesson = (props) => {
   const { match } = props;
@@ -28,6 +31,10 @@ const Lesson = (props) => {
       setShowDropdown(false);
     }
   };
+  
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [lessonList]);
 
   useEffect(() => {
     if (lesson && user) {
@@ -101,6 +108,12 @@ const Lesson = (props) => {
     const paragraphs = container.querySelectorAll("p");
     paragraphs.forEach((paragraph) => {
       paragraph.classList.add("p-body-medium");
+    });
+
+    const codeBlocks = container.querySelectorAll("code");
+    codeBlocks.forEach((block) => {
+      block.classList.add("language-python");
+      block.classList.add("p-body-medium");
     });
 
     return container.innerHTML;
