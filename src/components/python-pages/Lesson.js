@@ -5,10 +5,12 @@ import Footer from "../Footer";
 import "../css/Lesson.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { doc, updateDoc, arrayUnion } from "firebase/firestore";
+import { db, auth } from "../../firebase.js";
+import { useAuthState } from "react-firebase-hooks/auth";
 import Prism from "prismjs";
 import 'prismjs/components/prism-python';
 import "../css/prism.css";
-
 
 const Lesson = (props) => {
   const { match } = props;
@@ -17,6 +19,7 @@ const Lesson = (props) => {
   const [lessonList, setLessonList] = useState(null);
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef(null);
+  const [user] = useAuthState(auth);
 
   const toggleDropdown = (event) => {
     event.stopPropagation();
@@ -32,6 +35,14 @@ const Lesson = (props) => {
   useEffect(() => {
     Prism.highlightAll();
   }, [lessonList]);
+
+  useEffect(() => {
+    if (lesson && user) {
+      updateDoc(doc(db, "users", user.uid), {
+        completed: arrayUnion(parseInt(lesson.id)),
+      });
+    }
+  }, [lesson, user]);  
 
   useEffect(() => {
     fetch(

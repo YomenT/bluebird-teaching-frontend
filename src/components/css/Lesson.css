@@ -54,3 +54,45 @@
 .fa-angle-down {
     margin: 0 0 0 10px;
 }
+
+.lessons-container {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #a5c8df;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.lesson-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.lesson-link {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: clamp(14px, 3vw, 21px);
+}
+
+.lesson-status {
+    display: flex;
+    align-items: center;
+}
+
+.lesson-checkbox {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+}
