@@ -16,7 +16,7 @@ function PythonLinkOutline() {
             const docRef = doc(db, "users", user.uid);
             getDoc(docRef).then(docSnap => {
             if (docSnap.exists()) {
-                setUserCompletedLessons(docSnap.data().completed);
+                setUserCompletedLessons(docSnap.data().completed || []);
             }
           });
           }
