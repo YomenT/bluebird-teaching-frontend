@@ -28,7 +28,11 @@ class Python extends React.Component {
                         The content below is made in coordination with an in person course at the Islamic Association of Raleigh.  However, it's certainly 
                         not a bad place to go to; even if you're not attending the in person portion.  
                     </p>
-                    <p className="p-body-small" style={{ paddingTop: "50px" }}>
+                    <p className="p-body-medium">
+                        The lessons below that begin with a date are more specific/tied to in person lessons, but they still have 
+                        more general content like all the other lessons that don't begin with a date.  
+                    </p>
+                    <p className="p-body-small" style={{ paddingTop: "25px" }}>
                           Use the form below to ask any questions related to the PCEP Course. The attachments field is there for you to use if you need 
                           to upload any screenshots of code you're working with, error messages you're getting, etc.
                     </p>
