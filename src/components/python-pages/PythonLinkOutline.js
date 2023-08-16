@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Subsets from "../Subsets";
 import { doc, updateDoc, arrayUnion, arrayRemove, getDoc } from "firebase/firestore";
 import { db, auth } from "../../firebase.js";
 import { useAuthState } from "react-firebase-hooks/auth";
+
+import Subsets from "../Subsets";
+import "../css/PythonLinkOutline.css"
 
 function PythonLinkOutline() {
     const [lessons, setLessons] = useState([]);
