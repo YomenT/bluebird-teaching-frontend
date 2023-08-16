@@ -33,6 +33,7 @@
     right: 10px;
     top: 5px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .close-button:hover,

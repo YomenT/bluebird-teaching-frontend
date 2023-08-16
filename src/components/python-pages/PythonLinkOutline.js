@@ -107,9 +107,12 @@ function PythonLinkOutline() {
                 <div className="modal">
                     <div className="modal-content">
                         <span className="close-button" onClick={() => setShowModal(false)}>x</span>
-                        <p className="p-body-medium">It looks like you're not logged in.</p>
-                        <p className="p-body-small">
-                            Click on the green "Login" button at the top right to create an account or sign in.
+                        <p className="p-body-medium" style={{ marginTop: "40px" }}>It looks like you're not logged in.</p>
+                        <p className="p-body-xsmall">
+                            Click <Link to="/login">here </Link> to sign in or create an account.
+                        </p>
+                        <p className="p-body-xsmall">
+                            You can still view content without an account, but creating an account allows you to track your progress throughout the lessons.
                         </p>
                     </div>
                 </div>
