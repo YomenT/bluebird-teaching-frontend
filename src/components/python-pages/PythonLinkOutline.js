@@ -9,28 +9,31 @@ function PythonLinkOutline() {
     const [lessons, setLessons] = useState([]);
     const [userCompletedLessons, setUserCompletedLessons] = useState([]);
     const [user] = useAuthState(auth);
+    const [showModal, setShowModal] = useState(false);  // New State for modal
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
-          if (user) {
-            const docRef = doc(db, "users", user.uid);
-            getDoc(docRef).then(docSnap => {
-            if (docSnap.exists()) {
-                setUserCompletedLessons(docSnap.data().completed || []);
+            if (user) {
+                const docRef = doc(db, "users", user.uid);
+                getDoc(docRef).then(docSnap => {
+                    if (docSnap.exists()) {
+                        setUserCompletedLessons(docSnap.data().completed || []);
+                    }
+                });
+            } else {
+                setShowModal(true); // Show the modal when there's no logged-in user
             }
-          });
-          }
         });
-    
-        return () => {
-          unsubscribe();
-        };
-      }, []);
 
-      const handleLessonCompletion = async (lessonId, checked) => {
+        return () => {
+            unsubscribe();
+        };
+    }, []);
+
+    const handleLessonCompletion = async (lessonId, checked) => {
         if (!user) return;
         let updatedCompletedLessons;
-        
+
         if (checked) { 
             updatedCompletedLessons = [...userCompletedLessons, lessonId];
             await updateDoc(doc(db, "users", user.uid), { 
@@ -42,7 +45,7 @@ function PythonLinkOutline() {
                 completed: arrayRemove(lessonId) 
             }); 
         }
-        
+
         setUserCompletedLessons(updatedCompletedLessons);
     }
 
@@ -67,7 +70,7 @@ function PythonLinkOutline() {
             <ol className="list-medium lessons-container">
                 {lessons.map((lesson, index) => {
                     const isLessonCompleted = userCompletedLessons.includes(lesson.id);
-                    const titleText = isLessonCompleted ?"Mark as unvisited" : "Mark as visited"
+                    const titleText = isLessonCompleted ? "Mark as unvisited" : "Mark as visited";
 
                     if (lesson.completed) {
                         return (
@@ -98,9 +101,12 @@ function PythonLinkOutline() {
                     }
                 })}
             </ol>
-            {!user && (
-                <div className="hint-tooltip">
-                    <span>Login or sign up to track your progress!</span>
+            {showModal && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <span className="close-button" onClick={() => setShowModal(false)}>×</span>
+                        <p>Login or sign up to track your progress!</p>
+                    </div>
                 </div>
             )}
         </div>
