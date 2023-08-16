@@ -67,8 +67,7 @@ function PythonLinkOutline() {
             <ol className="list-medium lessons-container">
                 {lessons.map((lesson, index) => {
                     const isLessonCompleted = userCompletedLessons.includes(lesson.id);
-                    const titleText = isLessonCompleted ? "Mark as unvisited" : "Mark as visited"
-                    const tooltipText = user ? titleText : "Log in or create an account to track your progress!";
+                    const titleText = isLessonCompleted ?"Mark as unvisited" : "Mark as visited"
 
                     if (lesson.completed) {
                         return (
@@ -76,7 +75,7 @@ function PythonLinkOutline() {
                                 <Link className="lesson-link" to={`/${lesson.subset_name}/${index + 1}/`} style={{ color: '#365789'}} onMouseOver={changeLinkColorEnter} onMouseOut={changeLinkColorLeave}>
                                     {lesson.title}
                                 </Link>
-                                {user && (
+                                {user ? (
                                     <div className="lesson-status">
                                         {isLessonCompleted && <span className="visited-text">Visited</span>}
                                         <input
@@ -84,8 +83,12 @@ function PythonLinkOutline() {
                                             type="checkbox"
                                             checked={isLessonCompleted}
                                             onChange={() => handleLessonCompletion(lesson.id, !isLessonCompleted)}
-                                            title={tooltipText}
+                                            title={titleText}
                                         />
+                                    </div>
+                                ) : (
+                                    <div className="hint-tooltip">
+                                        <span>Sign up to track your progress!</span>
                                     </div>
                                 )}
                             </li>
