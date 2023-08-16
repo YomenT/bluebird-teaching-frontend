@@ -75,7 +75,7 @@ function PythonLinkOutline() {
                                 <Link className="lesson-link" to={`/${lesson.subset_name}/${index + 1}/`} style={{ color: '#365789'}} onMouseOver={changeLinkColorEnter} onMouseOut={changeLinkColorLeave}>
                                     {lesson.title}
                                 </Link>
-                                {user ? (
+                                {user && (
                                     <div className="lesson-status">
                                         {isLessonCompleted && <span className="visited-text">Visited</span>}
                                         <input
@@ -85,10 +85,6 @@ function PythonLinkOutline() {
                                             onChange={() => handleLessonCompletion(lesson.id, !isLessonCompleted)}
                                             title={titleText}
                                         />
-                                    </div>
-                                ) : (
-                                    <div className="hint-tooltip">
-                                        <span>Sign up to track your progress!</span>
                                     </div>
                                 )}
                             </li>
@@ -102,6 +98,11 @@ function PythonLinkOutline() {
                     }
                 })}
             </ol>
+            {!user && (
+                <div className="hint-tooltip">
+                    <span>Login or sign up to track your progress!</span>
+                </div>
+            )}
         </div>
     );
 }

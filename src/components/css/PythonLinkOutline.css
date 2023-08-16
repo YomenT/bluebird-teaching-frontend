@@ -1,0 +1,11 @@
+.hint-tooltip {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #365789;
+    color: white;
+    text-align: center;
+    z-index: 1000;
+}
