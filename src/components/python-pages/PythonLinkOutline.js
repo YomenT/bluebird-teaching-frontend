@@ -65,10 +65,10 @@ function PythonLinkOutline() {
     return (
         <div>
             <ol className="list-medium lessons-container">
-                {/* <li><Link to="/python/introduction" style={{ color: "#365789" }} onMouseOver={changeLinkColorEnter} onMouseOut={changeLinkColorLeave}>How To Code In Python</Link></li> */}
                 {lessons.map((lesson, index) => {
                     const isLessonCompleted = userCompletedLessons.includes(lesson.id);
-                    const titleText = isLessonCompleted ?"Mark as unvisited" : "Mark as visited"
+                    const titleText = isLessonCompleted ? "Mark as unvisited" : "Mark as visited"
+                    const tooltipText = user ? titleText : "Log in or create an account to track your progress!";
 
                     if (lesson.completed) {
                         return (
@@ -84,7 +84,7 @@ function PythonLinkOutline() {
                                             type="checkbox"
                                             checked={isLessonCompleted}
                                             onChange={() => handleLessonCompletion(lesson.id, !isLessonCompleted)}
-                                            title={titleText}
+                                            title={tooltipText}
                                         />
                                     </div>
                                 )}
