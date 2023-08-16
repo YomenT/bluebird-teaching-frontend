@@ -11,7 +11,7 @@ function PythonLinkOutline() {
     const [lessons, setLessons] = useState([]);
     const [userCompletedLessons, setUserCompletedLessons] = useState([]);
     const [user] = useAuthState(auth);
-    const [showModal, setShowModal] = useState(false);  // New State for modal
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -23,7 +23,9 @@ function PythonLinkOutline() {
                     }
                 });
             } else {
-                setShowModal(true); // Show the modal when there's no logged-in user
+                if (!localStorage.getItem('modalShown')) {
+                    setShowModal(true);
+                }
             }
         });
 
@@ -36,16 +38,16 @@ function PythonLinkOutline() {
         if (!user) return;
         let updatedCompletedLessons;
 
-        if (checked) { 
+        if (checked) {
             updatedCompletedLessons = [...userCompletedLessons, lessonId];
-            await updateDoc(doc(db, "users", user.uid), { 
-                completed: arrayUnion(lessonId) 
-            }); 
-        } else { 
+            await updateDoc(doc(db, "users", user.uid), {
+                completed: arrayUnion(lessonId)
+            });
+        } else {
             updatedCompletedLessons = userCompletedLessons.filter(id => id !== lessonId);
-            await updateDoc(doc(db, "users", user.uid), { 
-                completed: arrayRemove(lessonId) 
-            }); 
+            await updateDoc(doc(db, "users", user.uid), {
+                completed: arrayRemove(lessonId)
+            });
         }
 
         setUserCompletedLessons(updatedCompletedLessons);
@@ -67,17 +69,37 @@ function PythonLinkOutline() {
         e.target.style.color = "#365789";
     };
 
+    const closeModal = () => {
+        setShowModal(false);
+        localStorage.setItem('modalShown', 'true');
+    }
+
     return (
         <div>
+            {showModal && !user && (
+                <div className="modal" onClick={closeModal}>
+                    <div className="modal-content">
+                        <span className="close-button" onClick={() => setShowModal(false)}>x</span>
+                        <p className="p-body-medium" style={{ marginTop: "40px" }}>It looks like you're not logged in.</p>
+                        <p className="p-body-xsmall">
+                            Click <Link to="/login">here </Link> to sign in or create an account.
+                        </p>
+                        <p className="p-body-xsmall">
+                            You can still view content without an account, but creating an account allows you to track your progress throughout the lessons.
+                        </p>
+                    </div>
+                </div>
+            )}
+
             <ol className="list-medium lessons-container">
                 {lessons.map((lesson, index) => {
                     const isLessonCompleted = userCompletedLessons.includes(lesson.id);
-                    const titleText = isLessonCompleted ? "Mark as unvisited" : "Mark as visited";
+                    const titleText = isLessonCompleted ? "Mark as unvisited" : "Mark as visited"
 
                     if (lesson.completed) {
                         return (
                             <li key={index} className="lesson-item">
-                                <Link className="lesson-link" to={`/${lesson.subset_name}/${index + 1}/`} style={{ color: '#365789'}} onMouseOver={changeLinkColorEnter} onMouseOut={changeLinkColorLeave}>
+                                <Link className="lesson-link" to={`/${lesson.subset_name}/${index + 1}/`} style={{ color: '#365789' }} onMouseOver={changeLinkColorEnter} onMouseOut={changeLinkColorLeave}>
                                     {lesson.title}
                                 </Link>
                                 {user && (
@@ -103,20 +125,6 @@ function PythonLinkOutline() {
                     }
                 })}
             </ol>
-            {showModal && (
-                <div className="modal">
-                    <div className="modal-content">
-                        <span className="close-button" onClick={() => setShowModal(false)}>x</span>
-                        <p className="p-body-medium" style={{ marginTop: "40px" }}>It looks like you're not logged in.</p>
-                        <p className="p-body-xsmall">
-                            Click <Link to="/login">here </Link> to sign in or create an account.
-                        </p>
-                        <p className="p-body-xsmall">
-                            You can still view content without an account, but creating an account allows you to track your progress throughout the lessons.
-                        </p>
-                    </div>
-                </div>
-            )}
         </div>
     );
 }
