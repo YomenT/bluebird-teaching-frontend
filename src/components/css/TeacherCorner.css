@@ -21,3 +21,27 @@
 .aboutBodyDiv {
     padding-bottom: 300px;
 }
+
+/* Slide animation for components. */
+.slide-enter {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .slide-enter-active {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  
+  .slide-exit {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  
+  .slide-exit-active {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+  
