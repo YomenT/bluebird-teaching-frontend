@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { auth, db } from "../firebase.js";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { CSSTransition } from 'react-transition-group';
 import UploadResourceForm from "./UploadResourceForm.js";
 import ContractForm from "./ContractForm.js";
+import CreateRequest from "./ai-determined-lesson-standards/CreateRequest.js";
 import Collapsible from 'react-collapsible';
 import Logo from './Logo'
 import Footer from './Footer'
@@ -13,7 +15,12 @@ import { doc, getDoc } from "firebase/firestore";
 function TeacherCorner() {
   const [userType, setUserType] = useState("");
   const [user, loading] = useAuthState(auth);
+  const [showNewComponent, setShowNewComponent] = useState(false);
 	const history = useHistory();
+
+	const handleTestClick = () => {
+		setShowNewComponent(!showNewComponent); // Toggle the state
+	  };
 
 	useEffect(() => {
 		const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -71,6 +78,22 @@ function TeacherCorner() {
 						please use the form below to upload it.
 					</p>
 					<UploadResourceForm/>
+				</Collapsible>
+				<Collapsible trigger="AI Determined Lesson Standards">
+					<CSSTransition
+						in={showNewComponent}
+						timeout={300}
+						classNames="slide"
+						unmountOnExit
+						onEnter={() => setShowNewComponent(true)}
+						onExited={() => setShowNewComponent(false)}>
+						<CreateRequest />
+					</CSSTransition>
+					{!showNewComponent && (
+					<p className="p-body-small" onClick={handleTestClick}>
+						Test
+					</p>
+					)}
 				</Collapsible>
 				<h4 className="h4-blue-headers" style={{ paddingBottom: "25px" }}>Frequently Asked Questions</h4>
 				<p className="p-body"><strong><i>What are contracts for?</i></strong></p>
