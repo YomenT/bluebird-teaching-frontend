@@ -1,17 +1,29 @@
 import React, { useState } from 'react';
 import "../css/ConfigureDefaults.css"
+import { db } from '../../firebase.js';
 
-const ConfigureDefaults = ({ onBack }) => {
+const ConfigureDefaults = ({ onBack, userId }) => {
 
     const [gradeLevel, setGradeLevel] = useState('');
     const [subject, setSubject] = useState('');
 
+    const saveDefaults = async () => {
+        try {
+            await db.collection('users').doc(userId).set({
+                defaultGradeLevel: gradeLevel,
+                defaultSubject: subject
+            }, { merge: true });
+
+            console.log('Defaults saved successfully!');
+            onBack();
+        } catch (error) {
+            console.error("Error saving defaults:", error);
+        }
+    };
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        const formData = { gradeLevel, subject };
-        console.log(formData); 
-
-        onBack();
+        saveDefaults();
     };
 
     return (

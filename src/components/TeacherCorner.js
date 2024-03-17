@@ -14,10 +14,11 @@ import "./css/TeacherCorner.css";
 import { doc, getDoc } from "firebase/firestore";
 
 function TeacherCorner() {
-  const [userType, setUserType] = useState("");
-  const [user, loading] = useAuthState(auth);
-  const [showNewComponent, setShowNewComponent] = useState(false);
-  const [showConfigureDefaults, setShowConfigureDefaults] = useState(false);
+	const [userId, setUserId] = useState("");
+	const [userType, setUserType] = useState("");
+	const [user, loading] = useAuthState(auth);
+	const [showNewComponent, setShowNewComponent] = useState(false);
+	const [showConfigureDefaults, setShowConfigureDefaults] = useState(false);
 	const history = useHistory();
 
 	const handleTestClick = () => {
@@ -38,6 +39,7 @@ function TeacherCorner() {
 	useEffect(() => {
 		const unsubscribe = auth.onAuthStateChanged((user) => {
 		  if (user) {
+			setUserId(user.uid);
 			const docRef = doc(db, "users", user.uid);
 			getDoc(docRef).then(docSnap => {
 			  if (docSnap.exists()) {
