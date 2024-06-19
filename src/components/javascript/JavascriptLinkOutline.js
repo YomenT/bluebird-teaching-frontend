@@ -5,7 +5,7 @@ import { db, auth } from "../../firebase.js";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import Subsets from "../Subsets.js";
-import "../css/PythonLinkOutline"
+import "../css/PythonLinkOutline.css"
 
 function JavascriptLinkOutline() {
 

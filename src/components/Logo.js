@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "firebase/auth";
 import { auth, logout, db } from "../firebase.js";
 import { doc, getDoc } from "firebase/firestore";
+import DropdownMenu from "./DropdownMenu";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -57,11 +58,7 @@ const Navbar = () => {
             SAT Prep
           </button>
         </Link>
-        <Link to="/PCEP Course">
-          <button type="button" class="outline-button">
-            PCEP Course at IAR
-          </button>
-        </Link>
+        <DropdownMenu />
         <Link to="/focus_log">
           <button type="button" class="outline-button">
             Focus Log
