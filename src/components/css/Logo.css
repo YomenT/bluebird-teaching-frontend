@@ -62,3 +62,29 @@
       padding-bottom: 90px;
     }
   }
+
+.Logo__button {
+        border: 0 !important;
+        border-radius: 0 !important;
+        background-color: #5b92e5;
+        color: white;
+        transition: background-color 0.3s;
+}
+
+.Logo__button:hover {
+        background-color: #365789;
+}
+
+.Logo__login-button {
+        border: 0 !important;
+        border-radius: 0 !important;
+        background-color: green !important;
+        color: white !important;
+}
+
+.Logo__logout-button {
+        border: 0 !important;
+        border-radius: 0 !important;
+        background-color: #fd6e6e !important;
+        color: black !important;
+}
