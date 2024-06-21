@@ -128,6 +128,7 @@ const Main = () => {
 
       {/* JavaScript */}
       <Route exact path='/Javascript' component={Javascript}></Route>
+      <Route exact path='/JavaScript Quick Guides' component={Javascript}></Route>
 
       <Route component={NotFound} />
     </Switch>

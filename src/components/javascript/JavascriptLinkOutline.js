@@ -64,7 +64,7 @@ function JavascriptLinkOutline() {
 
         const changeLinkColorEnter = (e) => { e.target.style.color = "#5b92e5" }
 
-        const changeLinkColorLeave = (e) => { e.target.style.color = "#5b92e5" }
+        const changeLinkColorLeave = (e) => { e.target.style.color = "#365789" }
 
         const closeModal = () => {
                 setShowModal(false)
