@@ -63,6 +63,9 @@ import Lesson from './python-pages/Lesson';
 // JavaScript
 import Javascript from './javascript/Javascript';
 
+// React
+import ReactPage from './react/ReactPage';
+
 const Main = () => {
   return (
     <Switch> 
@@ -129,6 +132,10 @@ const Main = () => {
       {/* JavaScript */}
       <Route exact path='/Javascript' component={Javascript}></Route>
       <Route exact path='/JavaScript Quick Guides' component={Javascript}></Route>
+
+      {/* React */}
+      <Route exact path='/React' component={ReactPage}></Route>
+      <Route exact path='/React Quick Guides' component={ReactPage}></Route>
 
       <Route component={NotFound} />
     </Switch>

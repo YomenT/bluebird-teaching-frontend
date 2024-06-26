@@ -24,6 +24,9 @@ const DropdownMenu = () => {
           <Link to="/javascript" onClick={toggleDropdown}>
             JavaScript Quick Guides
           </Link>
+          <Link to="/react" onClick={toggleDropdown}>
+                React Quick Guides
+          </Link>
         </div>
       )}
     </div>

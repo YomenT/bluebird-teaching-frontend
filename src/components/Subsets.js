@@ -4,7 +4,8 @@ const Subsets = {
     PassportToAdvancedMath: 'Passport to Advanced Math',
     ProblemSolvingAndDataAnalysis: 'Problem Solving and Data Analysis',
     HeartOfAlgebra: 'Heart of Algebra',
-    JavascriptQuickGuides: 'JavaScript Quick Guides'
+    JavascriptQuickGuides: 'JavaScript Quick Guides',
+    ReactQuickGuides: 'React Quick Guides'
 }
 
 export default Subsets
