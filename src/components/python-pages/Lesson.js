@@ -18,6 +18,7 @@ const Lesson = (props) => {
   const [lesson, setLesson] = useState(null);
   const [lessonList, setLessonList] = useState(null);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [comments, setComments] = useState([]);
   const dropdownRef = useRef(null);
   const [user] = useAuthState(auth);
 
@@ -58,6 +59,13 @@ const Lesson = (props) => {
       .then((data) => {
         setLessonList(data);
       });
+
+      fetch(`https://adminbluebirdteaching.pythonanywhere.com/lessons/${lessonId}/comments/`)
+      .then((response) => response.json())
+      .then((data) => {
+        setComments(data);
+      });
+
   }, [subset, lessonId]);
 
   useEffect(() => {
@@ -191,6 +199,20 @@ const Lesson = (props) => {
             <div style={{ marginBottom: "150px" }} dangerouslySetInnerHTML={{ __html: lesson.create_it }} />
           </>
         )}
+
+        <div className="comments-section">
+          <h4 className="h4-blue-headers">Comments</h4>
+          {comments.length > 0 ? (
+            comments.map((comment) => (
+              <div key={comment.id} className="comment">
+                <p>{comment.content}</p>
+                <small>Posted on: {new Date(comment.created_at).toLocaleString()}</small>
+              </div>
+            ))
+          ) : (
+            <p>No comments yet.</p>
+          )}
+        </div>
       </div>
       <Footer />
     </div>

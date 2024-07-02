@@ -96,3 +96,25 @@
     cursor: pointer;
     margin-left: 10px;
 }
+
+.comments-section {
+        margin-top: 50px;       
+}
+
+.comment {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+}
+
+.comment p {
+margin: 0 0 10px;
+}
+
+.comment small {
+        display: block;
+        color: #666;
+}
+      
