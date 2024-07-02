@@ -169,23 +169,28 @@ const Lesson = (props) => {
           style={{ paddingTop: "25px" }}
           dangerouslySetInnerHTML={{ __html: lesson.introduction }}
         />
-        <h4
-          className="h4-blue-headers"
-          style={{ paddingTop: "50px", paddingBottom: "10px" }}
-        >
-          Try it!
-        </h4>
-        <div dangerouslySetInnerHTML={{ __html: lesson.try_it }} />
-        <h4
-          className="h4-blue-headers"
-          style={{ paddingTop: "50px", paddingBottom: "10px" }}
-        >
-          Create it!
-        </h4>
-        <div
-          style={{ marginBottom: "150px" }}
-          dangerouslySetInnerHTML={{ __html: lesson.create_it }}
-        />
+        {lesson.try_it.trim() !== '<p class="p-body-medium">N/A</p>' && (
+          <>
+            <h4
+              className="h4-blue-headers"
+              style={{ paddingTop: "50px", paddingBottom: "10px" }}
+            >
+              Try it!
+            </h4>
+            <div dangerouslySetInnerHTML={{ __html: lesson.try_it }} />
+          </>
+        )}
+        {lesson.create_it.trim() !== '<p class="p-body-medium">N/A</p>' && (
+          <>
+            <h4
+              className="h4-blue-headers"
+              style={{ paddingTop: "50px", paddingBottom: "10px" }}
+            >
+              Create it!
+            </h4>
+            <div style={{ marginBottom: "150px" }} dangerouslySetInnerHTML={{ __html: lesson.create_it }} />
+          </>
+        )}
       </div>
       <Footer />
     </div>

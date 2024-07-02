@@ -1,0 +1,13 @@
+.dropdown-content {
+        min-width: 200px;
+}
+      
+.dropdown-content a {
+        color: white;
+        display: block;
+}
+      
+.dropdown-content a:hover {
+        color: #53a1ff;
+}
+      

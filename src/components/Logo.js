@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "firebase/auth";
 import { auth, logout, db } from "../firebase.js";
 import { doc, getDoc } from "firebase/firestore";
+import DropdownMenu from "./DropdownMenu";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,17 +54,13 @@ const Navbar = () => {
       </div>
       <div class={`navbar-buttons ${menuOpen ? "open" : ""}`}>
         <Link to="/satprep">
-          <button type="button" class="outline-button">
+          <button type="button" class="outline-button Logo__button">
             SAT Prep
           </button>
         </Link>
-        <Link to="/PCEP Course">
-          <button type="button" class="outline-button">
-            PCEP Course at IAR
-          </button>
-        </Link>
+        <DropdownMenu />
         <Link to="/focus_log">
-          <button type="button" class="outline-button">
+          <button type="button" class="outline-button Logo__button">
             Focus Log
           </button>
         </Link>
@@ -71,18 +68,18 @@ const Navbar = () => {
           <>
             {userType === "teacher" && (
               <Link to="/teacher-corner">
-                <button type="button" className="outline-button">
+                <button type="button" className="outline-button Logo__button">
                   Teacher Corner
                 </button>
               </Link>
             )}
-            <button type="button" className="button logout" onClick={handleLogout}>
+            <button type="button" className="button logout Logo__logout-button" onClick={handleLogout}>
               Logout
             </button>
           </>
         ) : (
           <Link to="/login">
-            <button type="button" className="button login-button">
+            <button type="button" className="button login-button Logo__login-button">
               Login
             </button>
           </Link>

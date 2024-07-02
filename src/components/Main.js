@@ -60,6 +60,12 @@ import PolynomialsOfHigherDegree from './passport-to-advanced-math/PolynomialsOf
 import ChainsSeriesPdfPage from './ChainsSeriesPdfPage';
 import Lesson from './python-pages/Lesson';
 
+// JavaScript
+import Javascript from './javascript/Javascript';
+
+// React
+import ReactPage from './react/ReactPage';
+
 const Main = () => {
   return (
     <Switch> 
@@ -122,6 +128,15 @@ const Main = () => {
       <Route exact path='/PCEP Course' component={Python}></Route>
       <Route exact path='/PCEP Course/introduction' component={HowToCodePython}></Route>
       <Route exact path="/:subset/:lessonId/" component={Lesson} />
+
+      {/* JavaScript */}
+      <Route exact path='/Javascript' component={Javascript}></Route>
+      <Route exact path='/JavaScript Quick Guides' component={Javascript}></Route>
+
+      {/* React */}
+      <Route exact path='/React' component={ReactPage}></Route>
+      <Route exact path='/React Quick Guides' component={ReactPage}></Route>
+
       <Route component={NotFound} />
     </Switch>
   );
