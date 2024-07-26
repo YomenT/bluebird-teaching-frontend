@@ -1,0 +1,45 @@
+{
+        "app-id": "com.bluebird.teaching",
+        "runtime": "org.freedesktop.Platform",
+        "runtime-version": "23.08",
+        "sdk": "org.freedesktop.Sdk",
+        "command": "/app/bin/bluebird-teaching",
+        "modules": [
+          {
+            "name": "nodejs",
+            "buildsystem": "simple",
+            "build-commands": [
+              "tar -xf node-v16.15.0-linux-x64.tar.xz --strip-components=1 -C /app"
+            ],
+            "sources": [
+              {
+                "type": "file",
+                "path": "third_party/node-v16.15.0-linux-x64.tar.xz"
+              }
+            ]
+          },
+          {
+            "name": "bluebird-teaching",
+            "buildsystem": "simple",
+            "build-commands": [
+              "export PATH=/app/bin:$PATH",
+              "npm install",
+              "npm run build",
+              "install -Dm755 build/* /app/bin/bluebird-teaching"
+            ],
+            "sources": [
+              {
+                "type": "git",
+                "url": "https://github.com/YomenT/bluebird-teaching-frontend.git",
+                "branch": "main"
+              }
+            ]
+          }
+        ],
+        "finish-args": [
+          "--share=network",
+          "--socket=x11",
+          "--socket=wayland"
+        ]
+      }
+      

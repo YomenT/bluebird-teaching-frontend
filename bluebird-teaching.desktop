@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Bluebird Teaching
+Exec=/app/bluebird-teaching
+Icon=com.bluebird.teaching
+Comment=Bluebird Teaching App
+Categories=Education;
