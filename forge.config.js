@@ -3,7 +3,16 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 
 module.exports = {
   packagerConfig: {
+    executableName: 'Bluebird Teaching',
     asar: true,
+    dir: __dirname,
+    ignore: [
+        '/var/run',
+        '.*',         
+        '/node_modules/.bin',
+        '/out',  
+        '/build-dir',  
+      ],
   },
   rebuildConfig: {},
   makers: [
@@ -30,18 +39,18 @@ module.exports = {
         }
       }
     },
-    // {
-    //   name: '@electron-forge/maker-zip',
-    //   platforms: ['darwin'],
-    // },
-    // {
-    //   name: '@electron-forge/maker-deb',
-    //   config: {},
-    // },
-    // {
-    //   name: '@electron-forge/maker-rpm',
-    //   config: {},
-    // },
+    {
+      name: '@electron-forge/maker-zip',
+      platforms: ['darwin'],
+    },
+    {
+      name: '@electron-forge/maker-deb',
+      config: {},
+    },
+    {
+      name: '@electron-forge/maker-rpm',
+      config: {},
+    },
   ],
   plugins: [
     {

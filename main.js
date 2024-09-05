@@ -1,8 +1,6 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
-if (require('electron-squirrel-startup')) app.quit();
-
 function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 800,
@@ -12,7 +10,7 @@ function createWindow () {
     }
   });
 
-  mainWindow.loadURL('https://bluebird-teaching.com'); // Change to your build output location
+  mainWindow.loadURL('https://bluebird-teaching.com');
 }
 
 app.on('ready', createWindow);
