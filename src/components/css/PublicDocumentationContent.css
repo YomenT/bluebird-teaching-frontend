@@ -1,0 +1,17 @@
+.PublicDocumentationContent__h3 {
+        margin: 0;
+        color: #1b2b44;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: clamp(30px, 2vw, 40px);
+        padding-bottom: 20px;
+        font-weight: 550;
+}
+
+.PublicDocumentationContent__h4 {
+        margin: 0;
+        color: #1b2b44;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: clamp(25px, 2vw, 30px);
+        padding-bottom: 20px;
+        font-weight: 550;
+}

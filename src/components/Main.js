@@ -66,6 +66,10 @@ import Javascript from './javascript/Javascript';
 // React
 import ReactPage from './react/ReactPage';
 
+// Public Documentation
+import PublicDocumentationHomePage from './public-documentation/PublicDocumentationHomePage'
+import PublicDocumentationContent from './public-documentation/PublicDocumentationContent'
+
 const Main = () => {
   return (
     <Switch> 
@@ -123,6 +127,10 @@ const Main = () => {
       <Route exact path='/passport_to_advanced_math/exponential_equations' component={ExponentialEquations}></Route>
       <Route exact path='/passport_to_advanced_math/equations_with_rational_expressions' component={RationalExpressionsEquations}></Route>
       <Route exact path='/passport_to_advanced_math/inequalities_with_rational_expressions' component={RationalExpressionsInequalities}></Route>
+
+      {/* Public Documentation */}
+      <Route exact path='/public_documentation' component={PublicDocumentationHomePage}></Route>
+      <Route exact path='/public_documentation/:title_name' component={PublicDocumentationContent}></Route>
 
       {/* Python */}
       <Route exact path='/PCEP Course' component={Python}></Route>

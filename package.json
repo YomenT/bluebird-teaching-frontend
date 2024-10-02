@@ -32,17 +32,12 @@
     "reactstrap": "^8.5.1",
     "yarn": "^1.22.22"
   },
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-packager . app --platform linux --arch x64 --out dist/",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build-flatpak": "flatpak-bundler flatpak.json",
-    "electron": "npx electron .",
-    "flatpak64": "electron-installer-flatpak --src dist/app-linux-x64/ --dest dist/installers/ --arch x64",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
-  },
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": "react-app"
   },

@@ -1,0 +1,82 @@
+.sidebar {
+        position: absolute;
+        left: -15vw;
+        height: 100%;
+        width: 15vw;
+        transition: left 0.3s ease-in-out;
+        background-color: #5b92e5;
+        z-index: 100;
+}
+
+.sidebar-toggle {
+        position: absolute;
+        top: 10%;
+        border: none;
+        background-color: #1b2b44;
+        outline: none;
+        box-shadow: none;
+        right: -24px;
+        height: 60px;
+        z-index: 101;
+}
+
+.sidebar.open {
+        left: 0;
+}
+
+.sidebar-toggle:focus {
+        outline: none;
+        box-shadow: none;
+}
+
+.sidebar-content {
+        padding: 10px;
+        overflow-y: auto;
+}
+
+.sidebar-item {
+        padding: 5px 10px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #eef4fc;
+}
+
+.sidebar-item:hover {
+        background-color: #4a7cc0; /* Change color on hover */
+}
+
+/* Styling for the sidebar title */
+.sidebar-title {
+        display: flex;
+        align-items: center; /* Center icon and text vertically */
+}
+
+.sidebar-title:hover {
+        background-color: #4a7cc0;
+}
+
+/* Styling for the sidebar icon (bullet or caret) */
+.sidebar-icon {
+        margin-right: 10px; /* Space between icon and text */
+}
+
+/* Indentation for sub-pages */
+.sub-titles {
+        padding-left: 20px;
+}
+
+/* Styling for the sub-items */
+.sidebar-sub-item {
+        padding: 3px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        color: #ffffff90; /* Lighter color for sub-items */
+}
+
+.sidebar-sub-item:hover {
+        background-color: #4a7cc0;
+}
+
+.sidebar-title-text {
+        display: inline-block;
+}
